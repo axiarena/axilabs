@@ -24,8 +24,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ currentMode }) => {
     setExpandedItems(newExpanded);
   };
 
-  const faqItems: FAQItem[] = [
-
+  
 
   const categories = [
     { id: 'general', name: 'General', icon: <HelpCircle size={16} /> },
