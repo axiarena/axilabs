@@ -24,7 +24,41 @@ export const FAQPage: React.FC<FAQPageProps> = ({ currentMode }) => {
     setExpandedItems(newExpanded);
   };
 
- 
+  const faqItems: FAQItem[] = [
+
+
+  const categories = [
+    { id: 'general', name: 'General', icon: <HelpCircle size={16} /> },
+    { id: 'technical', name: 'Technical', icon: <MessageCircle size={16} /> },
+    { id: 'account', name: 'Account', icon: <ExternalLink size={16} /> },
+    { id: 'tokens', name: 'Tokens', icon: <ExternalLink size={16} /> }
+  ];
+
+  const [selectedCategory, setSelectedCategory] = React.useState<string>('all');
+
+  const filteredItems = selectedCategory === 'all' 
+    ? faqItems 
+    : faqItems.filter(item => item.category === selectedCategory);
+
+  return (
+    <div className="max-w-4xl mx-auto px-4">
+      {/* Header */}
+      <div className="mb-8">
+        <h1 
+          className="text-3xl lg:text-4xl font-bold mb-4"
+          style={{ 
+            color: 'var(--accent)', 
+            textShadow: '0 0 8px var(--accent)',
+            fontFamily: 'Orbitron, monospace'
+          }}
+        >
+          🤔 Frequently Asked Questions
+        </h1>
+        <p className="text-lg" style={{ color: 'var(--accent)', opacity: 0.8 }}>
+          Everything you need to know about AXI ASI LAB
+        </p>
+      </div>
+
       {/* Category Filter */}
       <div className="mb-6">
         <div className="flex flex-wrap gap-2">
