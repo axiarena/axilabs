@@ -1082,41 +1082,6 @@ function App() {
           </div>
         </div>
 
-        {/* Navigation Items */}
-        <div className="p-4 space-y-2">
-          {/* MoodSelector under Home */}
-          <div className={`px-3 py-2 ${isSidebarCollapsed ? 'flex justify-center' : ''}`}>
-            {!isSidebarCollapsed && (
-              <div className="mb-2">
-                <div className="text-xs font-medium mb-2" style={{ color: 'var(--accent)', opacity: 0.7 }}>
-                  Change Your Iris
-                </div>
-              </div>
-            )}
-            <MoodSelector
-              currentMode={currentMode}
-              onModeChange={setCurrentMode}
-            />
-          </div>
-          
-          {sidebarItems.map((item) => {
-            if (item.requiresAuth && !currentUser) {
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => setShowAuthModal(true)}
-                  className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 hover:bg-[var(--accent-glow)] group ${
-                    isSidebarCollapsed ? 'justify-center' : ''
-                  }`}
-                  style={{ color: 'var(--accent)' }}
-                  title={isSidebarCollapsed ? item.label : ''}
-                >
-                  <div className="flex-shrink-0">
-                    {item.icon}
-                  </div>
-                  {!isSidebarCollapsed && (
-                    <span className="font-medium">{item.label}</span>
-                  )}
                 </button>
               );
             }
