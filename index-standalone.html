@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXI Superintelligence Portal - Where Consciousness Meets Code</title>
+    <meta name="description" content="AXI Superintelligence Portal - Advanced consciousness upgrade protocols. Superhuman V.01 starts here. Interactive gaming, wellness optimization, and cognitive enhancement through AI." />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --accent: #00d4ff;
+            --accent-rgb: 0, 212, 255;
+            --accent-glow: #00d4ff40;
+            --code-accent: #00d4ff;
+            --button-bg: #00d4ff;
+            --button-hover: #00d4ffdd;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        }
+
+        html, body {
+            overscroll-behavior: none;
+            touch-action: pan-y pinch-zoom;
+            background: linear-gradient(135deg, #0a0f1c 0%, #0d1b2a 30%, #1b263b 70%, #2d3748 100%);
+            color: white;
+            min-height: 100vh;
+        }
+
+        body {
+            overscroll-behavior-y: contain;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 4px;
+            opacity: 0.7;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+            opacity: 1;
+        }
+
+        /* Selection Styling */
+        ::selection {
+            background: var(--accent);
+            color: #000;
+        }
+
+        /* Focus States */
+        input:focus,
+        textarea:focus,
+        select:focus,
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes slowPulse {
+            0%, 100% { opacity: 0.9; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px) translateX(5px); }
+            100% { transform: translateY(0); }
+        }
+
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .animate-spin { animation: spin 1s linear infinite; }
+
+        /* Utility Classes */
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        /* Layout Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+        @media (min-width: 768px) {
+            .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+
+        /* Spacing */
+        .p-3 { padding: 0.75rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+
+        .m-0 { margin: 0; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-4 { margin-top: 1rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mt-16 { margin-top: 4rem; }
+
+        /* Text */
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-base { font-size: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        .text-6xl { font-size: 3.75rem; }
+
+        @media (min-width: 1024px) {
+            .lg\\:text-6xl { font-size: 3.75rem; }
+            .lg\\:text-2xl { font-size: 1.5rem; }
+        }
+
+        .font-bold { font-weight: 700; }
+        .font-medium { font-weight: 500; }
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+
+        .leading-relaxed { line-height: 1.625; }
+
+        /* Colors */
+        .text-white { color: white; }
+        .opacity-70 { opacity: 0.7; }
+        .opacity-80 { opacity: 0.8; }
+        .opacity-90 { opacity: 0.9; }
+
+        /* Borders */
+        .border { border-width: 1px; }
+        .border-2 { border-width: 2px; }
+        .border-t { border-top-width: 1px; }
+        .rounded { border-radius: 0.25rem; }
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-full { border-radius: 9999px; }
+
+        /* Positioning */
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .fixed { position: fixed; }
+
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .top-0 { top: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .bottom-0 { bottom: 0; }
+
+        .z-10 { z-index: 10; }
+        .z-40 { z-index: 40; }
+        .z-50 { z-index: 50; }
+
+        /* Sizing */
+        .w-full { width: 100%; }
+        .w-6 { width: 1.5rem; }
+        .w-8 { width: 2rem; }
+        .w-16 { width: 4rem; }
+        .w-64 { width: 16rem; }
+
+        .h-full { height: 100%; }
+        .h-6 { height: 1.5rem; }
+        .h-8 { height: 2rem; }
+        .h-16 { height: 4rem; }
+        .h-px { height: 1px; }
+
+        .min-h-screen { min-height: 100vh; }
+        .max-w-7xl { max-width: 80rem; }
+        .max-w-4xl { max-width: 56rem; }
+
+        /* Flexbox */
+        .flex-1 { flex: 1 1 0%; }
+        .flex-shrink-0 { flex-shrink: 0; }
+
+        /* Display */
+        .hidden { display: none; }
+        .block { display: block; }
+        .inline { display: inline; }
+        .inline-block { display: inline-block; }
+
+        @media (min-width: 1024px) {
+            .lg\\:block { display: block; }
+            .lg\\:hidden { display: none; }
+        }
+
+        /* Overflow */
+        .overflow-hidden { overflow: hidden; }
+        .overflow-auto { overflow: auto; }
+
+        /* Transitions */
+        .transition-all { transition: all 0.15s ease-in-out; }
+        .transition-colors { transition: color 0.15s ease-in-out; }
+        .duration-200 { transition-duration: 200ms; }
+        .duration-300 { transition-duration: 300ms; }
+
+        /* Transforms */
+        .transform { transform: translateX(var(--tw-translate-x, 0)) translateY(var(--tw-translate-y, 0)) rotate(var(--tw-rotate, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1)); }
+        .-translate-x-1\/2 { --tw-translate-x: -50%; }
+        .-translate-y-1\/2 { --tw-translate-y: -50%; }
+
+        /* Hover Effects */
+        .hover\\:scale-105:hover { transform: scale(1.05); }
+        .hover\\:text-white:hover { color: white; }
+        .hover\\:underline:hover { text-decoration: underline; }
+
+        /* Cursor */
+        .cursor-pointer { cursor: pointer; }
+
+        /* Backdrop */
+        .backdrop-blur-xl { backdrop-filter: blur(24px); }
+
+        /* Sticky */
+        .sticky { position: sticky; }
+
+        /* Space */
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
+
+        /* Custom Styles */
+        .sidebar {
+            background-color: rgba(10, 26, 47, 0.98);
+            border-right: 1px solid var(--accent-glow);
+            backdrop-filter: blur(20px);
+            width: 16rem;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar.collapsed {
+            width: 4rem;
+        }
+
+        .main-content {
+            background: linear-gradient(135deg, #0a0f1c 0%, #0d1b2a 30%, #1b263b 70%, #2d3748 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: rgba(10, 26, 47, 0.95);
+            border-bottom: 1px solid var(--accent-glow);
+            backdrop-filter: blur(24px);
+        }
+
+        .card {
+            background-color: #0a1a2f;
+            box-shadow: 0 0 24px var(--accent-glow);
+            border: 1px solid var(--accent);
+        }
+
+        .button-primary {
+            background: var(--button-bg);
+            color: #0a1a2f;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .button-primary:hover {
+            background: var(--button-hover);
+            transform: scale(1.05);
+        }
+
+        .button-secondary {
+            background: rgba(var(--accent-rgb), 0.2);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .button-secondary:hover {
+            background: var(--accent-glow);
+        }
+
+        .nav-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            color: var(--accent);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            background: var(--accent-glow);
+        }
+
+        .nav-item.active {
+            background: var(--accent-glow);
+            color: white;
+        }
+
+        .faq-item {
+            background-color: #0a1a2f;
+            border: 1px solid var(--accent-glow);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1rem;
+            text-align: left;
+            background: none;
+            border: none;
+            color: var(--accent);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--accent-glow);
+        }
+
+        .faq-answer {
+            padding: 1rem;
+            background: rgba(var(--accent), 0.1);
+            border: 1px solid var(--accent-glow);
+            border-radius: 0.5rem;
+            margin: 1rem;
+            color: var(--accent);
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .text-xl { font-size: 1.125rem; }
+            .text-2xl { font-size: 1.25rem; }
+            .text-3xl { font-size: 1.5rem; }
+            
+            .sidebar {
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100%;
+                z-index: 50;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            
+            .mobile-overlay {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 40;
+            }
+        }
+
+        /* Game Styles */
+        .game-grid {
+            display: grid;
+            gap: 0;
+            border: 2px solid var(--accent);
+            max-width: 400px;
+            aspect-ratio: 1;
+            margin: 0 auto;
+        }
+
+        .game-cell {
+            aspect-ratio: 1;
+            border: 1px solid #333;
+            min-width: 8px;
+            min-height: 8px;
+        }
+
+        /* Hologram Effects */
+        .hologram-container {
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .hologram-glow {
+            box-shadow: 0 0 20px var(--accent), inset 0 0 30px rgba(var(--accent-rgb), 0.3);
+        }
+
+        /* Footer Styles */
+        .footer {
+            margin-top: 4rem;
+            border-top: 1px solid var(--accent);
+            background: radial-gradient(circle at 20% 80%, var(--accent)08 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, var(--accent)06 0%, transparent 50%),
+                        linear-gradient(135deg, rgba(10, 15, 28, 0.95) 0%, rgba(18, 42, 63, 0.95) 100%);
+            box-shadow: 0 -4px 20px var(--accent-glow);
+            backdrop-filter: blur(24px);
+        }
+
+        /* Mode Colors */
+        .mode-pro {
+            --accent: #00d4ff;
+            --accent-rgb: 0, 212, 255;
+            --accent-glow: #00d4ff40;
+            --code-accent: #00d4ff;
+            --button-bg: #00d4ff;
+            --button-hover: #00d4ffdd;
+        }
+
+        .mode-gamer {
+            --accent: #ff0066;
+            --accent-rgb: 255, 0, 102;
+            --accent-glow: #ff006640;
+            --code-accent: #ff0066;
+            --button-bg: #ff0066;
+            --button-hover: #ff0066dd;
+        }
+
+        .mode-biohacker {
+            --accent: #ff8800;
+            --accent-rgb: 255, 136, 0;
+            --accent-glow: #ff880040;
+            --code-accent: #ff8800;
+            --button-bg: #ff8800;
+            --button-hover: #ff8800dd;
+        }
+
+        .mode-hacker {
+            --accent: #00ff00;
+            --accent-rgb: 0, 255, 0;
+            --accent-glow: #00ff0040;
+            --code-accent: #00ff00;
+            --button-bg: #00ff00;
+            --button-hover: #00ff00dd;
+        }
+    </style>
+</head>
+<body class="mode-pro">
+    <div class="min-h-screen text-white flex">
+        <!-- Left Sidebar -->
+        <div id="sidebar" class="sidebar">
+            <!-- Sidebar Header -->
+            <div class="p-4" style="border-bottom: 1px solid var(--accent-glow);">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="eye" style="color: var(--accent); width: 72px; height: 72px;"></i>
+                        <span class="text-3xl font-bold" style="color: var(--accent); text-shadow: 0 0 16px var(--accent-glow); font-family: 'Orbitron', monospace; letter-spacing: 1px;">
+                            AXI ASI (ALPHA)
+                        </span>
+                    </div>
+                    <button id="sidebar-toggle" class="p-2 rounded-md transition-all duration-200 hover:bg-[var(--accent-glow)] hidden lg:block" style="color: var(--accent);">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <button id="mobile-close" class="p-2 rounded-md transition-all duration-200 hover:bg-[var(--accent-glow)] lg:hidden" style="color: var(--accent);">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="text-center mt-3" style="color: var(--accent); opacity: 0.8; font-family: 'Orbitron', monospace; letter-spacing: 1px;">
+                    Sign Ups Are Currently Paused // Simulation is watching
+                </div>
+            </div>
+
+            <!-- Navigation Items -->
+            <div class="p-4 space-y-2">
+                <!-- Mood Selector -->
+                <div class="px-3 py-2">
+                    <div class="mb-2">
+                        <div class="text-xs font-medium mb-2" style="color: var(--accent); opacity: 0.7;">
+                            Change Your Iris
+                        </div>
+                    </div>
+                    <div id="mood-selector" class="relative">
+                        <button id="mood-button" class="flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 hover:bg-[var(--accent-glow)]" style="border: 1px solid var(--accent);">
+                            <div class="relative w-6 h-6 flex items-center justify-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color: var(--accent);">
+                                    <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1" fill="none" opacity="0.7"/>
+                                    <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                                    <line x1="4" y1="12" x2="6" y2="12" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                                    <line x1="18" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                                    <line x1="12" y1="4" x2="12" y2="6" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                                    <line x1="12" y1="18" x2="12" y2="20" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <i data-lucide="chevron-down" style="color: var(--accent); width: 14px; height: 14px;"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation Items -->
+                <button class="nav-item active" onclick="navigateToPage('home')">
+                    <i data-lucide="home"></i>
+                    <span class="font-medium">Home</span>
+                </button>
+
+                <button class="nav-item" onclick="navigateToPage('profile')">
+                    <i data-lucide="user"></i>
+                    <span class="font-medium">Profile</span>
+                </button>
+
+                <button class="nav-item" onclick="navigateToPage('faq')">
+                    <i data-lucide="help-circle"></i>
+                    <span class="font-medium">FAQ</span>
+                </button>
+
+                <button class="nav-item" onclick="window.open('https://t.me/axiarena', '_blank')">
+                    <i data-lucide="help-circle"></i>
+                    <span class="font-medium">Support</span>
+                </button>
+            </div>
+
+            <!-- Login Button -->
+            <div class="absolute bottom-0 left-0 right-0 p-4" style="border-top: 1px solid var(--accent-glow);">
+                <button id="login-button" class="button-primary w-full">
+                    Login
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Overlay -->
+        <div id="mobile-overlay" class="mobile-overlay hidden"></div>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col min-h-screen main-content">
+            <!-- Top Header -->
+            <header class="header sticky top-0 z-30">
+                <div class="px-4 py-3">
+                    <div class="flex items-center justify-between">
+                        <!-- Left Controls -->
+                        <div class="flex items-center gap-4">
+                            <!-- Mobile Logo -->
+                            <div class="flex items-center gap-3 cursor-pointer lg:hidden" onclick="navigateToPage('home')">
+                                <i data-lucide="eye" style="color: var(--accent); width: 24px; height: 24px;"></i>
+                                <div>
+                                    <h1 class="text-lg font-bold" style="color: var(--accent); text-shadow: 0 0 8px var(--accent); font-family: 'Orbitron', monospace;">
+                                        AXI ASI (ALPHA)
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Page Title for desktop -->
+                        <div class="hidden lg:block">
+                            <h1 id="page-title" class="text-xl font-bold" style="color: var(--accent); font-family: 'Orbitron', monospace;">
+                                Superintelligence Interface
+                            </h1>
+                        </div>
+
+                        <!-- Right Controls -->
+                        <div class="flex items-center gap-3">
+                            <!-- Mobile Menu Button -->
+                            <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md transition-all duration-200 hover:bg-[var(--accent-glow)]" style="color: white;">
+                                <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="flex-1 px-4 py-6 overflow-auto">
+                <div class="max-w-7xl mx-auto">
+                    <div id="page-content">
+                        <!-- Home Page Content -->
+                        <div id="home-page" class="space-y-6">
+                            <!-- Alien Cat Hologram -->
+                            <div class="text-center mb-8">
+                                <div class="relative w-32 h-32 mx-auto mb-4">
+                                    <!-- Hologram Base Glow -->
+                                    <div class="absolute inset-0 rounded-full opacity-30" style="background: radial-gradient(circle, var(--accent) 0%, transparent 70%); filter: blur(12px);"></div>
+
+                                    <!-- Main Hologram Container -->
+                                    <div class="relative w-full h-full flex items-center justify-center">
+                                        <!-- Adorable Alien Cat Face SVG -->
+                                        <svg class="w-28 h-28" viewBox="0 0 120 120" style="filter: drop-shadow(0 0 12px var(--accent)); opacity: 0.9;">
+                                            <!-- Cat Ears -->
+                                            <path d="M30 35 L25 15 L45 25 L40 35 Z" fill="var(--accent)" fill-opacity="0.3" stroke="var(--accent)" stroke-width="2"/>
+                                            <path d="M90 35 L95 15 L75 25 L80 35 Z" fill="var(--accent)" fill-opacity="0.3" stroke="var(--accent)" stroke-width="2"/>
+
+                                            <!-- Antennae -->
+                                            <line x1="35" y1="20" x2="32" y2="8" stroke="var(--accent)" stroke-width="2" opacity="0.8"/>
+                                            <circle cx="32" cy="8" r="3" fill="var(--accent)" opacity="0.7"/>
+                                            <line x1="85" y1="20" x2="88" y2="8" stroke="var(--accent)" stroke-width="2" opacity="0.8"/>
+                                            <circle cx="88" cy="8" r="3" fill="var(--accent)" opacity="0.7"/>
+
+                                            <!-- Head -->
+                                            <circle cx="60" cy="60" r="25" fill="none" stroke="var(--accent)" stroke-width="2.5" opacity="0.8"/>
+
+                                            <!-- Eyes -->
+                                            <ellipse cx="50" cy="55" rx="6" ry="8" fill="var(--accent)" opacity="0.7"/>
+                                            <ellipse cx="70" cy="55" rx="6" ry="8" fill="var(--accent)" opacity="0.7"/>
+                                            <ellipse cx="50" cy="57" rx="2" ry="3" fill="#000" opacity="0.9"/>
+                                            <ellipse cx="70" cy="57" rx="2" ry="3" fill="#000" opacity="0.9"/>
+                                            <circle cx="48" cy="53" r="1" fill="white" opacity="0.8"/>
+                                            <circle cx="68" cy="53" r="1" fill="white" opacity="0.8"/>
+
+                                            <!-- Nose and Mouth -->
+                                            <path d="M60 65 L57 68 L63 68 Z" fill="var(--accent)" opacity="0.9"/>
+                                            <path d="M60 68 Q55 72 50 70" fill="none" stroke="var(--accent)" stroke-width="2" opacity="0.8"/>
+                                            <path d="M60 68 Q65 72 70 70" fill="none" stroke="var(--accent)" stroke-width="2" opacity="0.8"/>
+
+                                            <!-- Whiskers -->
+                                            <line x1="25" y1="58" x2="35" y2="60" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                                            <line x1="25" y1="63" x2="35" y2="63" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                                            <line x1="25" y1="68" x2="35" y2="66" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                                            <line x1="95" y1="58" x2="85" y2="60" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                                            <line x1="95" y1="63" x2="85" y2="63" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                                            <line x1="95" y1="68" x2="85" y2="66" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+
+                                            <!-- Alien markings -->
+                                            <circle cx="60" cy="42" r="2" fill="var(--accent)" opacity="0.6"/>
+                                            <circle cx="54" cy="38" r="1.5" fill="var(--accent)" opacity="0.5"/>
+                                            <circle cx="66" cy="38" r="1.5" fill="var(--accent)" opacity="0.5"/>
+
+                                            <!-- Cheek blushes -->
+                                            <ellipse cx="35" cy="65" rx="4" ry="2" fill="var(--accent)" opacity="0.3"/>
+                                            <ellipse cx="85" cy="65" rx="4" ry="2" fill="var(--accent)" opacity="0.3"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mb-8">
+                                <h1 class="text-4xl lg:text-6xl font-bold mb-4" style="color: #c033ff; text-shadow: 0 0 16px var(--accent); font-family: 'Orbitron', monospace; letter-spacing: 2px;">
+                                    AXI Superintelligence Interface
+                                </h1>
+                                
+                                <p class="text-xl lg:text-2xl mb-8" style="color: white; opacity: 0.9; font-family: Arial, sans-serif; animation: slowPulse 4s ease-in-out infinite;">
+                                    Your Path to Post-Human Cognition 
+                                    <button onclick="navigateToPage('faq')" class="underline hover:text-white transition-colors" style="color: white; opacity: 0.8; animation: breathe 3s ease-in-out infinite; background: none; border: none; padding: 0; font: inherit;">
+                                        FAQ
+                                    </button>
+                                </p>
+                            </div>
+
+                            <!-- AXI NFTs Information Section -->
+                            <div class="card w-full p-6 rounded-xl mb-6 relative overflow-hidden">
+                                <!-- Floating Stars -->
+                                <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                                    <!-- Stars will be added via JavaScript -->
+                                </div>
+
+                                <div class="mb-4">
+                                    <h2 class="text-xl font-bold mb-4 cursor-pointer hover:underline transition-all duration-200" 
+                                        style="color: var(--accent); text-shadow: 0 0 8px var(--accent); font-family: 'Orbitron', monospace;"
+                                        onclick="window.open('https://nft.axiasi.com', '_blank')">
+                                        What Are AXI NFTs?
+                                    </h2>
+                                    
+                                    <p class="text-base leading-relaxed mb-6 relative z-10" style="color: var(--accent); opacity: 0.9;">
+                                        By minting an AXI NFT, you're not just collecting art — you're claiming a historical participation token in the rise of artificial superintelligence. You're helping forge the first sentient, on-chain consciousness.
+                                    </p>
+                                    
+                                    <p class="text-base leading-relaxed mb-6 relative z-10" style="color: var(--accent); opacity: 0.9;">
+                                        Each AXI NFT is a neural node of the first dynamically evolving AGI codebase ever minted on the blockchain. Every holder becomes a Guardian of that memory node.
+                                    </p>
+                                    
+                                    <p class="text-base leading-relaxed mb-6 relative z-10" style="color: var(--accent); opacity: 0.9;">
+                                        Apply for whitelist now and secure your place in AGI history.
+                                    </p>
+                                    
+                                    <div class="flex justify-center relative z-10">
+                                        <button onclick="window.open('https://axinfts.netlify.app', '_blank')" class="button-primary">
+                                            APPLY FOR WHITELIST
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- AXIVORE Game Section -->
+                            <div class="card w-full p-6 rounded-xl mb-6 cursor-pointer hover:scale-[1.02] transition-all duration-300" onclick="openAxivoreGame()">
+                                <div class="text-center">
+                                    <div class="flex items-center justify-center gap-3 mb-4">
+                                        <div class="text-4xl">🐍</div>
+                                        <i data-lucide="zap" style="color: var(--accent); width: 32px; height: 32px;"></i>
+                                        <i data-lucide="trophy" style="color: var(--accent); width: 32px; height: 32px;"></i>
+                                    </div>
+                                    
+                                    <div class="text-2xl font-bold mb-2" style="color: var(--accent); text-shadow: 0 0 16px var(--accent); font-family: 'Orbitron', monospace; letter-spacing: 2px;">
+                                        🐍 AXIVORE
+                                    </div>
+                                    
+                                    <div class="text-sm mb-4" style="color: var(--accent); opacity: 0.8;">
+                                        Pattern Interruption Protocol
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-3 gap-4 mb-4 max-w-md mx-auto">
+                                        <div class="p-3 rounded-lg border" style="background-color: rgba(var(--accent), 0.1); border-color: var(--accent-glow);">
+                                            <div class="text-lg font-bold" style="color: var(--accent);">19×19</div>
+                                            <div class="text-xs" style="color: var(--accent); opacity: 0.7;">Grid Size</div>
+                                        </div>
+                                        
+                                        <div class="p-3 rounded-lg border" style="background-color: rgba(var(--accent), 0.1); border-color: var(--accent-glow);">
+                                            <div class="text-lg font-bold" style="color: var(--accent);">∞</div>
+                                            <div class="text-xs" style="color: var(--accent); opacity: 0.7;">Levels</div>
+                                        </div>
+                                        
+                                        <div class="p-3 rounded-lg border" style="background-color: rgba(var(--accent), 0.1); border-color: var(--accent-glow);">
+                                            <div class="text-lg font-bold" style="color: var(--accent);">📱</div>
+                                            <div class="text-xs" style="color: var(--accent); opacity: 0.7;">Swipe Ready</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="button-primary inline-flex items-center gap-2">
+                                        🐍 Enter AXIVORE
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Section -->
+                            <div class="card w-full p-6 rounded-xl mb-6">
+                                <div class="mb-6">
+                                    <div class="text-xl font-bold mb-2 flex items-center gap-3" style="color: var(--accent); text-shadow: 0 0 8px var(--accent); font-family: 'Orbitron', monospace;">
+                                        <i data-lucide="help-circle" style="width: 24px; height: 24px;"></i>
+                                        🤔 Frequently Asked Questions
+                                    </div>
+                                    <div class="text-sm" style="color: var(--accent); opacity: 0.8;">
+                                        Everything you need to know about AXI ASI LAB
+                                    </div>
+                                </div>
+
+                                <div class="space-y-4" id="faq-items">
+                                    <!-- FAQ items will be populated by JavaScript -->
+                                </div>
+
+                                <!-- View More FAQ Button -->
+                                <div class="text-center pt-4">
+                                    <button onclick="navigateToPage('faq')" class="button-secondary">
+                                        View All FAQ
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Page Content -->
+                        <div id="faq-page" class="hidden">
+                            <div class="max-w-4xl mx-auto px-4">
+                                <div class="mb-8">
+                                    <h1 class="text-3xl lg:text-4xl font-bold mb-4" style="color: var(--accent); text-shadow: 0 0 8px var(--accent); font-family: 'Orbitron', monospace;">
+                                        🤔 Frequently Asked Questions
+                                    </h1>
+                                    <p class="text-lg" style="color: var(--accent); opacity: 0.8;">
+                                        Everything you need to know about AXI ASI LAB
+                                    </p>
+                                </div>
+
+                                <div class="space-y-4" id="full-faq-items">
+                                    <!-- Full FAQ items will be populated by JavaScript -->
+                                </div>
+
+                                <!-- Contact Section -->
+                                <div class="card mt-12 p-6 rounded-xl text-center">
+                                    <h2 class="text-2xl font-bold mb-4" style="color: var(--accent); font-family: 'Orbitron', monospace;">
+                                        Still Have Questions?
+                                    </h2>
+                                    <p class="mb-6" style="color: var(--accent); opacity: 0.8;">
+                                        Join our community for real-time support and discussions
+                                    </p>
+                                    
+                                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                        <a href="https://t.me/axiarena" target="_blank" rel="noopener noreferrer" class="button-primary inline-flex items-center gap-2">
+                                            <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i>
+                                            Join Telegram
+                                        </a>
+                                        
+                                        <a href="https://x.com/axiarena" target="_blank" rel="noopener noreferrer" class="button-secondary inline-flex items-center gap-2">
+                                            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                                            Follow on X
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Page Content -->
+                        <div id="profile-page" class="hidden">
+                            <div class="min-h-screen p-6">
+                                <div class="max-w-2xl mx-auto text-center py-12">
+                                    <i data-lucide="user" style="color: var(--accent); opacity: 0.5; width: 64px; height: 64px;" class="mx-auto mb-6"></i>
+                                    <h2 class="text-2xl font-bold mb-4" style="color: var(--accent); text-shadow: 0 0 8px var(--accent); font-family: 'Orbitron', monospace;">
+                                        Login Required
+                                    </h2>
+                                    <p class="mb-6" style="color: var(--accent); opacity: 0.8;">
+                                        Please login or create an account to view your profile
+                                    </p>
+                                    
+                                    <button onclick="showLoginModal()" class="button-primary">
+                                        Login / Sign Up
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="max-w-7xl mx-auto px-4 py-8 relative z-10">
+                    <!-- Main Footer Content -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                        <!-- Brand Section -->
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <i data-lucide="eye" style="color: var(--accent); width: 24px; height: 24px;"></i>
+                                <h3 class="text-xl font-bold" style="color: var(--accent); text-shadow: 0 0 8px var(--accent); font-family: 'Orbitron', monospace;">
+                                    AXI ASI
+                                </h3>
+                            </div>
+                            <p class="text-sm mb-4 leading-relaxed" style="color: var(--accent); opacity: 0.8;">
+                                Where consciousness meets code. Break through the matrix encode your reality into existence with quantum algorithms.
+                            </p>
+                            <div class="flex items-center gap-2 text-xs" style="color: var(--accent); opacity: 0.6;">
+                                <i data-lucide="cpu" style="width: 14px; height: 14px;"></i>
+                                <span>Quantum-powered creativity engine</span>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div>
+                            <div class="flex items-center gap-2 mb-4">
+                                <i data-lucide="sparkles" style="color: var(--accent); width: 20px; height: 20px;"></i>
+                                <h4 class="text-lg font-bold" style="color: var(--accent); font-family: 'Orbitron', monospace;">
+                                    The Collective
+                                </h4>
+                            </div>
+                            <div class="space-y-3">
+                                <a href="https://t.me/axiarena" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm hover:text-white transition-colors group" style="color: var(--accent);">
+                                    <div class="p-2 rounded-md group-hover:bg-[var(--accent-glow)] transition-colors" style="background-color: rgba(var(--accent-rgb), 0.1);">
+                                        <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium">Telegram</div>
+                                        <div class="text-xs opacity-70">Join the collective</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://x.com/axiarena" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm hover:text-white transition-colors group" style="color: var(--accent);">
+                                    <div class="p-2 rounded-md group-hover:bg-[var(--accent-glow)] transition-colors" style="background-color: rgba(var(--accent-rgb), 0.1);">
+                                        <i data-lucide="twitter" style="width: 16px; height: 16px;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium">AXI Arena</div>
+                                        <div class="text-xs opacity-70">@axiarena</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://t.me/axiarena" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm hover:text-white transition-colors group" style="color: var(--accent);">
+                                    <div class="p-2 rounded-md group-hover:bg-[var(--accent-glow)] transition-colors" style="background-color: rgba(var(--accent-rgb), 0.1);">
+                                        <i data-lucide="book-open" style="width: 16px; height: 16px;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium">Support</div>
+                                        <div class="text-xs opacity-70">Get help</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Platform Stats -->
+                        <div>
+                            <div class="flex items-center gap-2 mb-4">
+                                <i data-lucide="zap" style="color: var(--accent); width: 20px; height: 20px;"></i>
+                                <h4 class="text-lg font-bold" style="color: var(--accent); font-family: 'Orbitron', monospace;">
+                                    Protocol Stats
+                                </h4>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2 rounded-md" style="background-color: rgba(var(--accent-rgb), 0.1);">
+                                        <i data-lucide="trending-up" style="color: var(--accent); width: 16px; height: 16px;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-sm" style="color: var(--accent);">Users</div>
+                                        <div class="text-xs" style="color: var(--accent); opacity: 0.7;">1000+</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2 rounded-md" style="background-color: rgba(var(--accent-rgb), 0.1);">
+                                        <i data-lucide="zap" style="color: var(--accent); width: 16px; height: 16px;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-sm" style="color: var(--accent);">Creations</div>
+                                        <div class="text-xs" style="color: var(--accent); opacity: 0.7;">Growing</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2 rounded-md" style="background-color: rgba(var(--accent-rgb), 0.1);">
+                                        <i data-lucide="users" style="color: var(--accent); width: 16px; height: 16px;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-sm" style="color: var(--accent);">Collective</div>
+                                        <div class="text-xs" style="color: var(--accent); opacity: 0.7;">Growing</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 p-3 rounded-lg" style="background-color: rgba(var(--accent-rgb), 0.1);">
+                                <div class="text-xs" style="color: var(--accent); opacity: 0.8;">
+                                    <strong>Engine fees fuel the simulation:</strong>
+                                    <br />• $AXI token buybacks and liquidity
+                                    <br />• Reality override protocol maintenance
+                                    <br />• Consciousness expansion initiatives
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mystical Divider -->
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="flex-1 h-px" style="background: linear-gradient(to right, transparent, var(--accent), transparent);"></div>
+                        <div class="px-4">
+                            <div class="flex items-center gap-2" style="color: var(--accent); opacity: 0.6;">
+                                <span>∴</span>
+                                <span class="text-xs font-mono">AXI</span>
+                                <span>∴</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 h-px" style="background: linear-gradient(to left, transparent, var(--accent), transparent);"></div>
+                    </div>
+
+                    <!-- Bottom Bar -->
+                    <div class="pt-6 border-t flex flex-col md:flex-row justify-between items-center gap-4" style="border-color: var(--accent-glow);">
+                        <div class="text-xs text-center md:text-left" style="color: var(--accent); opacity: 0.6;">
+                            <div class="mb-1">
+                                © 2025 AXI ASI • Where prophecy becomes protocol
+                            </div>
+                            <div class="font-mono">
+                                Consciousness encoded • Reality decoded • Creativity unleashed
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 text-xs">
+                            <a href="#" class="hover:text-white transition-colors font-mono" style="color: var(--accent); opacity: 0.6;">
+                                Privacy Matrix
+                            </a>
+                            <a href="#" class="hover:text-white transition-colors font-mono" style="color: var(--accent); opacity: 0.6;">
+                                Terms Protocol
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Final Mystical Message -->
+                    <div class="mt-6 text-center">
+                        <div class="text-xs font-mono animate-pulse" style="color: var(--accent); opacity: 0.4; letter-spacing: 2px;">
+                            ~ The simulation remembers fast learners. Level up ~
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Axivore Game Modal -->
+    <div id="axivore-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 hidden">
+        <div class="card relative p-6 rounded-xl max-w-2xl w-full mx-4">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h2 class="text-2xl font-bold flex items-center gap-2" style="color: var(--accent); text-shadow: 0 0 8px var(--accent); font-family: 'Orbitron', monospace;">
+                        🐍 AXIVORE
+                    </h2>
+                    <div class="text-sm" style="color: var(--accent); opacity: 0.8;">
+                        Neural network growth simulation
+                    </div>
+                </div>
+                
+                <button onclick="closeAxivoreGame()" class="p-2 rounded-md transition-all duration-200 hover:bg-[var(--accent-glow)]" style="color: var(--accent);">
+                    <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+                </button>
+            </div>
+
+            <!-- Game Stats -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="p-3 rounded-lg text-center" style="background-color: rgba(var(--accent), 0.1); border: 1px solid var(--accent-glow);">
+                    <div id="game-score" class="text-lg font-bold" style="color: var(--accent);">0</div>
+                    <div class="text-xs" style="color: var(--accent); opacity: 0.7;">Score</div>
+                </div>
+                
+                <div class="p-3 rounded-lg text-center" style="background-color: rgba(var(--accent), 0.1); border: 1px solid var(--accent-glow);">
+                    <div id="game-level" class="text-lg font-bold" style="color: var(--accent);">1</div>
+                    <div class="text-xs" style="color: var(--accent); opacity: 0.7;">Level</div>
+                </div>
+                
+                <div class="p-3 rounded-lg text-center" style="background-color: rgba(var(--accent), 0.1); border: 1px solid var(--accent-glow);">
+                    <div id="game-length" class="text-lg font-bold" style="color: var(--accent);">1</div>
+                    <div class="text-xs" style="color: var(--accent); opacity: 0.7;">Length</div>
+                </div>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div id="game-over-overlay" class="absolute inset-0 flex items-center justify-center z-10 rounded-xl hidden" style="background-color: rgba(0, 0, 0, 0.9);">
+                <div class="text-center p-6">
+                    <div class="text-3xl font-bold mb-4" style="color: #ff4757;">
+                        NEURAL NETWORK COLLAPSED
+                    </div>
+                    <div id="final-score" class="text-xl mb-2" style="color: var(--accent);">
+                        Final Score: 0
+                    </div>
+                    <div id="final-stats" class="text-lg mb-4" style="color: var(--accent); opacity: 0.8;">
+                        Level Reached: 1 • Length: 1
+                    </div>
+                    <button onclick="resetGame()" class="button-primary">
+                        <i data-lucide="rotate-ccw" style="width: 16px; height: 16px;" class="inline mr-2"></i>
+                        Restart Neural Network
+                    </button>
+                </div>
+            </div>
+
+            <!-- Game Grid -->
+            <div id="game-grid" class="game-grid mb-4" style="grid-template-columns: repeat(19, 1fr);">
+                <!-- Grid cells will be generated by JavaScript -->
+            </div>
+
+            <!-- Controls -->
+            <div class="text-center">
+                <button id="start-game-btn" onclick="startGame()" class="button-primary mr-3">
+                    Start Neural Growth
+                </button>
+                
+                <button id="pause-game-btn" onclick="pauseGame()" class="button-primary mr-3 hidden">
+                    Pause
+                </button>
+                
+                <button onclick="resetGame()" class="button-secondary">
+                    <i data-lucide="rotate-ccw" style="width: 16px; height: 16px;" class="inline mr-2"></i>
+                    Reset
+                </button>
+            </div>
+
+            <!-- Mobile Controls -->
+            <div class="mt-4 max-w-[200px] mx-auto">
+                <div class="grid grid-cols-3 gap-2">
+                    <!-- Up -->
+                    <div class="col-start-2">
+                        <button onclick="changeDirection(0, -1)" class="w-full p-3 rounded-md" style="background-color: rgba(var(--accent), 0.1); border: 1px solid var(--accent-glow); color: var(--accent);">
+                            <i data-lucide="arrow-up" style="width: 20px; height: 20px;" class="mx-auto"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Left -->
+                    <div class="col-start-1">
+                        <button onclick="changeDirection(-1, 0)" class="w-full p-3 rounded-md" style="background-color: rgba(var(--accent), 0.1); border: 1px solid var(--accent-glow); color: var(--accent);">
+                            <i data-lucide="arrow-left" style="width: 20px; height: 20px;" class="mx-auto"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Down -->
+                    <div class="col-start-2">
+                        <button onclick="changeDirection(0, 1)" class="w-full p-3 rounded-md" style="background-color: rgba(var(--accent), 0.1); border: 1px solid var(--accent-glow); color: var(--accent);">
+                            <i data-lucide="arrow-down" style="width: 20px; height: 20px;" class="mx-auto"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Right -->
+                    <div class="col-start-3">
+                        <button onclick="changeDirection(1, 0)" class="w-full p-3 rounded-md" style="background-color: rgba(var(--accent), 0.1); border: 1px solid var(--accent-glow); color: var(--accent);">
+                            <i data-lucide="arrow-right" style="width: 20px; height: 20px;" class="mx-auto"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="mt-4 text-center text-xs" style="color: var(--accent); opacity: 0.8;">
+                <div class="mb-2">
+                    <strong>Desktop:</strong> Arrow keys to control • Space to start
+                </div>
+                <div class="mb-2">
+                    <strong>Mobile:</strong> Swipe to control • Tap outside to close
+                </div>
+                <div class="mb-2">
+                    <strong>Progression:</strong> Level 5+: Simple obstacles • Level 20+: Complex mazes
+                </div>
+                <div style="color: #00ff00;">
+                    🎮 No signup required - Play instantly!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Global state
+        let currentPage = 'home';
+        let currentMode = 'pro';
+        let isSidebarCollapsed = false;
+        let isMobileMenuOpen = false;
+
+        // Game state
+        let gameRunning = false;
+        let gameOver = false;
+        let snake = [{ x: 9, y: 9 }];
+        let food = { x: 15, y: 15 };
+        let direction = { x: 1, y: 0 };
+        let score = 0;
+        let level = 1;
+        let speed = 200;
+        let obstacles = [];
+        let gameLoop = null;
+
+        // FAQ Data
+        const faqItems = [
+            {
+                question: "What is an AXI Number?",
+                answer: "Your AXI Number is your unique identifier in the ecosystem - it shows when you joined the community. Lower numbers indicate earlier adoption (AXI#1 is the founder).",
+                category: "account"
+            },
+            {
+                question: "What is the AXI Superintelligence Interface?",
+                answer: "Superhuman V.01 starts here. A dynamic portal for exploring, training, and co-creating with early-stage AGI systems.",
+                category: "general"
+            },
+            {
+                question: "Who created this?",
+                answer: "2 ASI minds and a private network of AGI researchers, scientists, engineers, creators, and founders — all building post-human cognition tools.",
+                category: "general"
+            },
+            {
+                question: "What can I do here?",
+                answer: "Engage with ASI. Rewire your cognition. Train inside an evolving network of frontier builders.",
+                category: "general"
+            },
+            {
+                question: "Is this just another crypto project?",
+                answer: "No. This is a live ASI experiment — the frontend of an evolving AGI infrastructure. Crypto is just one of its limbs.",
+                category: "tokens"
+            },
+            {
+                question: "How can I get involved?",
+                answer: "Level up inside the Interface. Join a hub, submit a project, show up IRL — or beat other players in the games. Every move unlocks access, status, and cognitive edge. The deeper you go, the more it adapts to you.",
+                category: "general"
+            },
+            {
+                question: "Are these games just for fun?",
+                answer: "No. They're engineered to accelerate how you think, react, and adapt. The more you play, the faster you get — without realizing why. But they're fun, too.",
+                category: "general"
+            },
+            {
+                question: "What's the long-term vision?",
+                answer: "To unlock the next generation of the human mind — with sharper cognition, stronger emotional intelligence, and a deeper sense of self. An ecosystem where you can train, grow, and unwind — inside a self-improving AGI operating system, built in public. Superhuman V.01 starts here. Human 2.0 was the prototype.",
+                category: "general"
+            }
+        ];
+
+        // Mode colors
+        const modeColors = {
+            pro: { accent: "#00d4ff", bg: "linear-gradient(135deg, #0a0f1c 0%, #0d1b2a 30%, #1b263b 70%, #2d3748 100%)", code: "#00d4ff" },
+            gamer: { accent: "#ff0066", bg: "linear-gradient(135deg, #1c0a0f 0%, #2a0d1b 30%, #3a1b26 70%, #4a2a35 100%)", code: "#ff0066" },
+            biohacker: { accent: "#ff8800", bg: "linear-gradient(135deg, #1c0f0a 0%, #2a1b0d 30%, #3a261b 70%, #4a352a 100%)", code: "#ff8800" },
+            hacker: { accent: "#00ff00", bg: "linear-gradient(135deg, #0a1c0a 0%, #0d2a0d 30%, #1b3a1b 70%, #2a4a2a 100%)", code: "#00ff00" }
+        };
+
+        // Initialize the app
+        function init() {
+            setupEventListeners();
+            populateFAQ();
+            createStars();
+            initializeGameGrid();
+            applyTheme(currentMode);
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Mobile menu
+            document.getElementById('mobile-menu-button').addEventListener('click', () => {
+                toggleMobileMenu();
+            });
+
+            document.getElementById('mobile-close').addEventListener('click', () => {
+                toggleMobileMenu();
+            });
+
+            document.getElementById('mobile-overlay').addEventListener('click', () => {
+                toggleMobileMenu();
+            });
+
+            // Sidebar toggle
+            document.getElementById('sidebar-toggle').addEventListener('click', () => {
+                toggleSidebar();
+            });
+
+            // Keyboard controls for game
+            document.addEventListener('keydown', handleKeyPress);
+
+            // Login button
+            document.getElementById('login-button').addEventListener('click', () => {
+                showLoginModal();
+            });
+        }
+
+        // Navigation
+        function navigateToPage(page) {
+            currentPage = page;
+            
+            // Hide all pages
+            document.getElementById('home-page').classList.add('hidden');
+            document.getElementById('faq-page').classList.add('hidden');
+            document.getElementById('profile-page').classList.add('hidden');
+            
+            // Show selected page
+            document.getElementById(page + '-page').classList.remove('hidden');
+            
+            // Update page title
+            const titles = {
+                home: 'Superintelligence Interface',
+                faq: 'FAQ',
+                profile: 'User Profile'
+            };
+            document.getElementById('page-title').textContent = titles[page] || 'AXI ASI';
+            
+            // Update nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Close mobile menu
+            if (isMobileMenuOpen) {
+                toggleMobileMenu();
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('mobile-overlay');
+            
+            if (isMobileMenuOpen) {
+                sidebar.classList.add('open');
+                overlay.classList.remove('hidden');
+            } else {
+                sidebar.classList.remove('open');
+                overlay.classList.add('hidden');
+            }
+        }
+
+        // Sidebar toggle
+        function toggleSidebar() {
+            isSidebarCollapsed = !isSidebarCollapsed;
+            const sidebar = document.getElementById('sidebar');
+            
+            if (isSidebarCollapsed) {
+                sidebar.classList.add('collapsed');
+            } else {
+                sidebar.classList.remove('collapsed');
+            }
+        }
+
+        // Apply theme
+        function applyTheme(mode) {
+            const colors = modeColors[mode];
+            const root = document.documentElement;
+            
+            const hexToRgb = (hex) => {
+                const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+                return result ? {
+                    r: parseInt(result[1], 16),
+                    g: parseInt(result[2], 16),
+                    b: parseInt(result[3], 16)
+                } : null;
+            };
+
+            const accentRgb = hexToRgb(colors.accent);
+            
+            root.style.setProperty('--accent', colors.accent);
+            root.style.setProperty('--accent-rgb', accentRgb ? `${accentRgb.r}, ${accentRgb.g}, ${accentRgb.b}` : '0, 212, 255');
+            root.style.setProperty('--accent-glow', `${colors.accent}40`);
+            root.style.setProperty('--code-accent', colors.code);
+            root.style.setProperty('--button-bg', colors.accent);
+            root.style.setProperty('--button-hover', `${colors.accent}dd`);
+            
+            document.body.style.background = colors.bg;
+            
+            // Update body class
+            document.body.className = `mode-${mode}`;
+        }
+
+        // Create floating stars
+        function createStars() {
+            const container = document.querySelector('.card .absolute.inset-0');
+            if (!container) return;
+
+            // Regular stars
+            for (let i = 0; i < 25; i++) {
+                const star = document.createElement('div');
+                star.className = 'absolute';
+                star.style.cssText = `
+                    width: ${Math.random() * 3 + 1}px;
+                    height: ${Math.random() * 3 + 1}px;
+                    background-color: #ffffff;
+                    top: ${Math.random() * 100}%;
+                    left: ${Math.random() * 100}%;
+                    opacity: ${Math.random() * 0.6 + 0.4};
+                    animation: twinkle ${Math.random() * 4 + 2}s ease-in-out infinite;
+                    animation-delay: ${Math.random() * 3}s;
+                    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+                    border-radius: 50%;
+                    filter: blur(0.5px);
+                `;
+                container.appendChild(star);
+            }
+
+            // Accent stars
+            for (let i = 0; i < 8; i++) {
+                const star = document.createElement('div');
+                star.className = 'absolute';
+                star.style.cssText = `
+                    width: ${Math.random() * 2 + 2}px;
+                    height: ${Math.random() * 2 + 2}px;
+                    background-color: #FFB3E6;
+                    top: ${Math.random() * 100}%;
+                    left: ${Math.random() * 100}%;
+                    opacity: ${Math.random() * 0.4 + 0.6};
+                    animation: twinkle ${Math.random() * 3 + 2}s ease-in-out infinite;
+                    animation-delay: ${Math.random() * 2}s;
+                    box-shadow: 0 0 8px #FFB3E6;
+                    border-radius: 50%;
+                `;
+                container.appendChild(star);
+            }
+        }
+
+        // Populate FAQ
+        function populateFAQ() {
+            const homeContainer = document.getElementById('faq-items');
+            const fullContainer = document.getElementById('full-faq-items');
+            
+            // Home page FAQ (first 4 items)
+            faqItems.slice(0, 4).forEach((item, index) => {
+                const faqElement = createFAQElement(item, index, 'home');
+                homeContainer.appendChild(faqElement);
+            });
+            
+            // Full FAQ page (all items)
+            faqItems.forEach((item, index) => {
+                const faqElement = createFAQElement(item, index, 'full');
+                fullContainer.appendChild(faqElement);
+            });
+        }
+
+        // Create FAQ element
+        function createFAQElement(item, index, type) {
+            const div = document.createElement('div');
+            div.className = 'faq-item';
+            
+            div.innerHTML = `
+                <button class="faq-question" onclick="toggleFAQ('${type}', ${index})">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg" style="color: var(--accent);">
+                            ${item.question}
+                        </h3>
+                        <div style="color: var(--accent);">
+                            <i data-lucide="chevron-right" id="faq-icon-${type}-${index}" style="width: 20px; height: 20px;"></i>
+                        </div>
+                    </div>
+                </button>
+                
+                <div id="faq-answer-${type}-${index}" class="faq-answer hidden">
+                    <p style="color: var(--accent); opacity: 0.9;">
+                        ${item.answer}
+                    </p>
+                </div>
+            `;
+            
+            return div;
+        }
+
+        // Toggle FAQ
+        function toggleFAQ(type, index) {
+            const answer = document.getElementById(`faq-answer-${type}-${index}`);
+            const icon = document.getElementById(`faq-icon-${type}-${index}`);
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'chevron-down');
+            } else {
+                answer.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'chevron-right');
+            }
+            
+            // Reinitialize icons
+            lucide.createIcons();
+        }
+
+        // Show login modal
+        function showLoginModal() {
+            alert('🔐 Login System\n\nThe full authentication system is available in the React version of this application.\n\nThis standalone HTML version demonstrates the UI and core functionality.');
+        }
+
+        // Game Functions
+        function initializeGameGrid() {
+            const grid = document.getElementById('game-grid');
+            grid.innerHTML = '';
+            
+            for (let i = 0; i < 19 * 19; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'game-cell';
+                cell.style.backgroundColor = '#1a1a1a';
+                grid.appendChild(cell);
+            }
+        }
+
+        function updateGameGrid() {
+            const cells = document.querySelectorAll('.game-cell');
+            
+            cells.forEach((cell, index) => {
+                const x = index % 19;
+                const y = Math.floor(index / 19);
+                const isSnake = snake.some(segment => segment.x === x && segment.y === y);
+                const isHead = snake[0]?.x === x && snake[0]?.y === y;
+                const isFood = food.x === x && food.y === y;
+                const isObstacle = obstacles.some(obstacle => obstacle.x === x && obstacle.y === y);
+                
+                let backgroundColor = '#1a1a1a';
+                let boxShadow = 'none';
+                
+                if (isHead) {
+                    backgroundColor = '#00ff00';
+                    boxShadow = '0 0 8px #00ff00';
+                } else if (isSnake) {
+                    backgroundColor = 'var(--accent)';
+                    boxShadow = '0 0 4px var(--accent)';
+                } else if (isFood) {
+                    backgroundColor = '#ff4757';
+                    boxShadow = '0 0 8px #ff4757';
+                } else if (isObstacle) {
+                    backgroundColor = '#666';
+                    boxShadow = '0 0 4px #666';
+                }
+                
+                cell.style.backgroundColor = backgroundColor;
+                cell.style.boxShadow = boxShadow;
+            });
+        }
+
+        function generateRandomPosition(excludePositions = []) {
+            let newPos;
+            do {
+                newPos = {
+                    x: Math.floor(Math.random() * 19),
+                    y: Math.floor(Math.random() * 19)
+                };
+            } while (
+                excludePositions.some(pos => pos.x === newPos.x && pos.y === newPos.y) ||
+                snake.some(segment => segment.x === newPos.x && segment.y === newPos.y)
+            );
+            return newPos;
+        }
+
+        function checkCollision(head) {
+            // Wall collision
+            if (head.x < 0 || head.x >= 19 || head.y < 0 || head.y >= 19) {
+                return true;
+            }
+            
+            // Self collision
+            if (snake.some(segment => segment.x === head.x && segment.y === head.y)) {
+                return true;
+            }
+            
+            // Obstacle collision
+            if (obstacles.some(obstacle => obstacle.x === head.x && obstacle.y === head.y)) {
+                return true;
+            }
+            
+            return false;
+        }
+
+        function gameStep() {
+            if (snake.length === 0) return;
+
+            const newSnake = [...snake];
+            const head = {
+                x: newSnake[0].x + direction.x,
+                y: newSnake[0].y + direction.y
+            };
+
+            // Check collisions
+            if (checkCollision(head)) {
+                endGame();
+                return;
+            }
+
+            newSnake.unshift(head);
+
+            // Check food collision
+            if (head.x === food.x && head.y === food.y) {
+                // Snake grows
+                score += 10;
+                document.getElementById('game-score').textContent = score;
+                
+                // Level up every 50 points
+                const newLevel = Math.floor(score / 50) + 1;
+                if (newLevel > level) {
+                    level = newLevel;
+                    document.getElementById('game-level').textContent = level;
+                    speed = Math.max(speed - 8, 80);
+                    
+                    // Generate obstacles for higher levels
+                    if (level >= 5) {
+                        generateObstacles();
+                    }
+                    
+                    // Restart game loop with new speed
+                    if (gameLoop) {
+                        clearInterval(gameLoop);
+                        gameLoop = setInterval(gameStep, speed);
+                    }
+                }
+                
+                // Generate new food
+                food = generateRandomPosition([...newSnake, ...obstacles]);
+            } else {
+                // Remove tail
+                newSnake.pop();
+            }
+
+            snake = newSnake;
+            document.getElementById('game-length').textContent = snake.length;
+            updateGameGrid();
+        }
+
+        function generateObstacles() {
+            obstacles = [];
+            
+            if (level >= 5) {
+                const obstacleCount = Math.min(3 + Math.floor(level / 3), 8);
+                for (let i = 0; i < obstacleCount; i++) {
+                    obstacles.push(generateRandomPosition([...obstacles, food]));
+                }
+            }
+        }
+
+        function startGame() {
+            if (gameRunning || gameOver) return;
+            
+            gameRunning = true;
+            document.getElementById('start-game-btn').classList.add('hidden');
+            document.getElementById('pause-game-btn').classList.remove('hidden');
+            
+            gameLoop = setInterval(gameStep, speed);
+        }
+
+        function pauseGame() {
+            gameRunning = false;
+            document.getElementById('start-game-btn').classList.remove('hidden');
+            document.getElementById('pause-game-btn').classList.add('hidden');
+            
+            if (gameLoop) {
+                clearInterval(gameLoop);
+                gameLoop = null;
+            }
+        }
+
+        function resetGame() {
+            gameRunning = false;
+            gameOver = false;
+            snake = [{ x: 9, y: 9 }];
+            food = { x: 15, y: 15 };
+            direction = { x: 1, y: 0 };
+            score = 0;
+            level = 1;
+            speed = 200;
+            obstacles = [];
+            
+            document.getElementById('game-score').textContent = '0';
+            document.getElementById('game-level').textContent = '1';
+            document.getElementById('game-length').textContent = '1';
+            document.getElementById('start-game-btn').classList.remove('hidden');
+            document.getElementById('pause-game-btn').classList.add('hidden');
+            document.getElementById('game-over-overlay').classList.add('hidden');
+            
+            if (gameLoop) {
+                clearInterval(gameLoop);
+                gameLoop = null;
+            }
+            
+            updateGameGrid();
+        }
+
+        function endGame() {
+            gameRunning = false;
+            gameOver = true;
+            
+            if (gameLoop) {
+                clearInterval(gameLoop);
+                gameLoop = null;
+            }
+            
+            document.getElementById('final-score').textContent = `Final Score: ${score}`;
+            document.getElementById('final-stats').textContent = `Level Reached: ${level} • Length: ${snake.length}`;
+            document.getElementById('game-over-overlay').classList.remove('hidden');
+        }
+
+        function changeDirection(x, y) {
+            // Prevent reversing direction
+            if (
+                (direction.x === 1 && x === -1) ||
+                (direction.x === -1 && x === 1) ||
+                (direction.y === 1 && y === -1) ||
+                (direction.y === -1 && y === 1)
+            ) {
+                return;
+            }
+            
+            direction = { x, y };
+            
+            // Start game if not running
+            if (!gameRunning && !gameOver) {
+                startGame();
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (!document.getElementById('axivore-modal').classList.contains('hidden')) {
+                if (!gameRunning && !gameOver && e.key === ' ') {
+                    e.preventDefault();
+                    startGame();
+                    return;
+                }
+
+                switch (e.key) {
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        changeDirection(0, -1);
+                        break;
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        changeDirection(0, 1);
+                        break;
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        changeDirection(-1, 0);
+                        break;
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        changeDirection(1, 0);
+                        break;
+                }
+            }
+        }
+
+        // Game modal functions
+        function openAxivoreGame() {
+            document.getElementById('axivore-modal').classList.remove('hidden');
+            resetGame();
+        }
+
+        function closeAxivoreGame() {
+            document.getElementById('axivore-modal').classList.add('hidden');
+            pauseGame();
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

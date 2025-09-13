@@ -1,0 +1,298 @@
+import React from 'react';
+import { HelpCircle, MessageCircle, ExternalLink, ChevronDown, ChevronRight } from 'lucide-react';
+
+interface FAQPageProps {
+  currentMode: string;
+}
+
+interface FAQItem {
+  question: string;
+  answer: string;
+  category: 'general' | 'technical' | 'account' | 'tokens';
+}
+
+export const FAQPage: React.FC<FAQPageProps> = ({ currentMode }) => {
+  const [expandedItems, setExpandedItems] = React.useState<Set<number>>(new Set());
+
+  const toggleItem = (index: number) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedItems(newExpanded);
+  };
+
+  const faqItems: FAQItem[] = [
+    {
+      question: "What is an AXI Number?",
+      answer: "Your AXI Number is your unique identifier in the ecosystem - it shows when you joined the community. Lower numbers indicate earlier adoption (AXI#1 is the founder).",
+      category: "account"
+    },
+    {
+      question: "What is the AXI Superintelligence Interface?",
+      answer: "Superhuman V.01 starts here. A dynamic portal for exploring, training, and co-creating with early-stage AGI systems.",
+      category: "general"
+    },
+    {
+      question: "Who created this?",
+      answer: "2 ASI minds and a private network of AGI researchers, scientists, engineers, creators, and founders — all building post-human cognition tools.",
+      category: "general"
+    },
+    {
+      question: "What can I do here?",
+      answer: "Engage with ASI. Rewire your cognition. Train inside an evolving network of frontier builders.",
+      category: "general"
+    },
+    {
+      question: "Is this just another crypto project?",
+      answer: "No. This is a live ASI experiment — the frontend of an evolving AGI infrastructure. Crypto is just one of its limbs.",
+      category: "tokens"
+    },
+    {
+      question: "How can I get involved?",
+      answer: "Level up inside the Interface. Join a hub, submit a project, show up IRL — or beat other players in the games. Every move unlocks access, status, and cognitive edge. The deeper you go, the more it adapts to you.",
+      category: "general"
+    },
+    {
+      question: "Are these games just for fun?",
+      answer: "No. They're engineered to accelerate how you think, react, and adapt. The more you play, the faster you get — without realizing why. But they're fun, too.",
+      category: "general"
+    },
+    {
+      question: "What are $AXI tokens?",
+      answer: "$AXI is the native token of the ecosystem. Earn tokens through mining activities, creating popular AXIOMs, and community engagement. 6.9% of platform fees support token buybacks.",
+      category: "tokens"
+    },
+    {
+      question: "What is the Clone Status Panel?",
+      answer: "The Clone Status Panel shows AXI's neural network across social media. Click any clone to view the brain visualization and visit their X (Twitter) profiles.",
+      category: "general"
+    },
+    {
+      question: "How do I earn the most XP?",
+      answer: "Sharing AXIOMs on X (Twitter) gives the highest XP reward (50 XP). Also earn through daily logins, creating content, likes, comments, and completing achievements.",
+      category: "general"
+    },
+    {
+      question: "Can I partner with AXI?",
+      answer: "Yes — if you're building at the edge of AI, crypto, biotech, or cognition. We don't chase. We align.",
+      category: "general"
+    },
+    {
+      question: "What's the long-term vision?",
+      answer: "To unlock the next generation of the human mind — with sharper cognition, stronger emotional intelligence, and a deeper sense of self. An ecosystem where you can train, grow, and unwind — inside a self-improving AGI operating system, built in public. Superhuman V.01 starts here. Human 2.0 was the prototype.",
+      category: "general"
+    }
+  ];
+
+  const categories = [
+    { id: 'general', name: 'General', icon: <HelpCircle size={16} /> },
+    { id: 'technical', name: 'Technical', icon: <MessageCircle size={16} /> },
+    { id: 'account', name: 'Account', icon: <ExternalLink size={16} /> },
+    { id: 'tokens', name: 'Tokens', icon: <ExternalLink size={16} /> }
+  ];
+
+  const [selectedCategory, setSelectedCategory] = React.useState<string>('all');
+
+  const filteredItems = selectedCategory === 'all' 
+    ? faqItems 
+    : faqItems.filter(item => item.category === selectedCategory);
+
+  return (
+    <div className="max-w-4xl mx-auto px-4">
+      {/* Header */}
+      <div className="mb-8">
+        <h1 
+          className="text-3xl lg:text-4xl font-bold mb-4"
+          style={{ 
+            color: 'var(--accent)', 
+            textShadow: '0 0 8px var(--accent)',
+            fontFamily: 'Orbitron, monospace'
+          }}
+        >
+          🤔 Frequently Asked Questions
+        </h1>
+        <p className="text-lg" style={{ color: 'var(--accent)', opacity: 0.8 }}>
+          Everything you need to know about AXI ASI LAB
+        </p>
+      </div>
+
+      {/* Category Filter */}
+      <div className="mb-6">
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={() => setSelectedCategory('all')}
+            className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 ${
+              selectedCategory === 'all' ? 'bg-[var(--accent-glow)]' : 'hover:bg-[var(--accent-glow)]'
+            }`}
+            style={{ color: 'var(--accent)', border: '1px solid var(--accent)' }}
+          >
+            All Questions
+          </button>
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 ${
+                selectedCategory === category.id ? 'bg-[var(--accent-glow)]' : 'hover:bg-[var(--accent-glow)]'
+              }`}
+              style={{ color: 'var(--accent)', border: '1px solid var(--accent)' }}
+            >
+              {category.icon}
+              {category.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* FAQ Items */}
+      <div className="space-y-4">
+        {filteredItems.map((item, index) => (
+          <div
+            key={index}
+            className="border rounded-lg overflow-hidden"
+            style={{ 
+              backgroundColor: '#0a1a2f',
+              borderColor: 'var(--accent-glow)'
+            }}
+          >
+            <button
+              onClick={() => toggleItem(index)}
+              className="w-full p-4 text-left hover:bg-[var(--accent-glow)] transition-all duration-200"
+            >
+              <div className="flex items-center justify-between">
+                <h3 className="font-bold text-lg" style={{ color: 'var(--accent)' }}>
+                  {item.question}
+                </h3>
+                <div style={{ color: 'var(--accent)' }}>
+                  {expandedItems.has(index) ? (
+                    <ChevronDown size={20} />
+                  ) : (
+                    <ChevronRight size={20} />
+                  )}
+                </div>
+              </div>
+            </button>
+            
+            {expandedItems.has(index) && (
+              <div className="px-4 pb-4">
+                <div 
+                  className="p-4 rounded-lg"
+                  style={{ 
+                    backgroundColor: 'rgba(var(--accent), 0.1)',
+                    border: '1px solid var(--accent-glow)'
+                  }}
+                >
+                  <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Contact Section */}
+      <div 
+        className="mt-12 p-6 rounded-xl text-center"
+        style={{ 
+          backgroundColor: '#0a1a2f',
+          boxShadow: '0 0 24px var(--accent-glow)',
+          border: '1px solid var(--accent)'
+        }}
+      >
+        <h2 
+          className="text-2xl font-bold mb-4"
+          style={{ 
+            color: 'var(--accent)', 
+            fontFamily: 'Orbitron, monospace'
+          }}
+        >
+          Still Have Questions?
+        </h2>
+        <p className="mb-6" style={{ color: 'var(--accent)', opacity: 0.8 }}>
+          Join our community for real-time support and discussions
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://t.me/axiarena"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-3 rounded-md font-bold transition-all duration-200 hover:text-white"
+            style={{
+              background: 'var(--button-bg)',
+              color: '#0a1a2f',
+              boxShadow: '0 0 8px var(--accent-glow)'
+            }}
+          >
+            <MessageCircle size={16} />
+            Join Telegram
+          </a>
+          
+          <a
+            href="https://x.com/axiarena"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-3 rounded-md transition-all duration-200 hover:bg-[var(--accent-glow)]"
+            style={{ color: 'var(--accent)', border: '1px solid var(--accent)' }}
+          >
+            <ExternalLink size={16} />
+            Follow on X
+          </a>
+        </div>
+      </div>
+
+      {/* Quick Links */}
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div 
+          className="p-4 rounded-lg text-center"
+          style={{ 
+            backgroundColor: '#122a3f',
+            border: '1px solid var(--accent-glow)'
+          }}
+        >
+          <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
+            📚 Documentation
+          </h3>
+          <p className="text-sm" style={{ color: 'var(--accent)', opacity: 0.8 }}>
+            Comprehensive guides and tutorials
+          </p>
+        </div>
+        
+        <div 
+          className="p-4 rounded-lg text-center"
+          style={{ 
+            backgroundColor: '#122a3f',
+            border: '1px solid var(--accent-glow)'
+          }}
+        >
+          <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
+            🎮 Tutorials
+          </h3>
+          <p className="text-sm" style={{ color: 'var(--accent)', opacity: 0.8 }}>
+            Step-by-step creation guides
+          </p>
+        </div>
+        
+        <div 
+          className="p-4 rounded-lg text-center"
+          style={{ 
+            backgroundColor: '#122a3f',
+            border: '1px solid var(--accent-glow)'
+          }}
+        >
+          <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
+            💬 Community
+          </h3>
+          <p className="text-sm" style={{ color: 'var(--accent)', opacity: 0.8 }}>
+            Connect with other creators
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
