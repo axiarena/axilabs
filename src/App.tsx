@@ -450,7 +450,7 @@ function App() {
                     letterSpacing: '2px'
                   }}
                 >
-                 🧬 AGI Matrix Portal
+                🧠 AGI Matrix Portal
                 </div>
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                  
