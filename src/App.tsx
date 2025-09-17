@@ -422,7 +422,21 @@ function App() {
             {/* Enhancement Protocols Section */}
           
  
-         
+            {/* Futuristic Mechanical Sections Grid */}
+            <div 
+              className="w-full p-6 rounded-xl mb-6 relative overflow-hidden"
+              style={{ 
+                backgroundColor: '#0a1a2f',
+                boxShadow: '0 0 24px var(--accent-glow)',
+                border: '1px solid var(--accent)',
+                background: `
+                  radial-gradient(circle at 20% 80%, var(--accent)12 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, var(--accent)08 0%, transparent 50%),
+                  linear-gradient(135deg, rgba(10, 26, 47, 0.95) 0%, rgba(18, 42, 63, 0.95) 100%)
+                `
+              }}
+            >
+              
               {/* Mechanical grid background */}
               <div className="absolute inset-0 pointer-events-none opacity-10">
                 <div 
