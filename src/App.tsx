@@ -469,15 +469,7 @@ function App() {
                     boxShadow: '0 0 20px rgba(0, 255, 136, 0.3)'
                   }}
                 >
-                  {/* Mechanical details */}
-                  <div className="absolute top-2 right-2 w-4 h-4 border-2 border-[#00ff88] rounded-full opacity-60">
-                    <div className="w-1 h-1 bg-[#00ff88] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
-                  </div>
-                  <div className="absolute bottom-2 left-2 flex gap-1">
-                    {[...Array(3)].map((_, i) => (
-                      <div key={i} className="w-1 h-4 bg-[#00ff88] opacity-40 rounded-full"></div>
-                    ))}
-                  </div>
+               
 
                   <div className="text-center">
                     <div className="text-4xl mb-4"></div>
