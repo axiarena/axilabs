@@ -464,7 +464,7 @@ function App() {
   <HologramBrain currentMode={currentMode} />
 </div>
 
-                  </div>
+                  
                
 
                
