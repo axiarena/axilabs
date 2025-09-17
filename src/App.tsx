@@ -502,20 +502,7 @@ function App() {
                     >
                   
                     </h3>
-                    <p className="text-sm mb-4" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                      
-                    </p>
-                    <div 
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200 group-hover:scale-110"
-                      style={{
-                        background: '#00ff88',
-                        color: '#0a1a2f',
-                        boxShadow: '0 0 15px rgba(0, 255, 136, 0.5)'
-                      }}
-                    >
-                    
-                    </div>
-                    
+             
                     {/* Brain visualization with clone nodes */}
                     <div className="mt-4">
                       <HologramBrain currentMode={currentMode} />
