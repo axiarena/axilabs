@@ -461,7 +461,7 @@ function App() {
                     letterSpacing: '2px'
                   }}
                 >
-                 🧬 6ixFold Martix Portal
+                 🧬 6ixFold AGI Martix Portal
                 </div>
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                   Access specialized modules -- Path from biology to immortality
