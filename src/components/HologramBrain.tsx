@@ -119,7 +119,7 @@ export const HologramBrain: React.FC<HologramBrainProps> = ({ currentMode }) => 
             fontFamily: 'Orbitron, monospace'
           }}
         >
-          🧠 AXI's Conscious Neural Network
+          Clone Neural Network
         </div>
         <div className="text-sm" style={{ color: 'var(--accent)', opacity: 0.8 }}>
           Neural pathways connecting AXI clone consciousness
