@@ -600,7 +600,7 @@ function App() {
                     
                     </h3>
                     <p className="text-sm mb-4" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                     Gamified simulations.
+                     
                     </p>
                     <div 
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200 group-hover:scale-110"
@@ -610,7 +610,7 @@ function App() {
                         boxShadow: '0 0 15px rgba(255, 165, 0, 0.5)'
                       }}
                     >
-                   COGNITIVE TRAINING
+                   RL Training
                     </div>
                   </div>
                 </div>
@@ -649,7 +649,6 @@ function App() {
                     
                     </h3>
                     <p className="text-sm mb-4" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                      Crystalizing on-chain memory expansion.
                     </p>
                     <div 
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200 group-hover:scale-110"
@@ -659,7 +658,7 @@ function App() {
                         boxShadow: '0 0 15px rgba(255, 215, 0, 0.5)'
                       }}
                     >
-                    MEMORY LATTICE
+                    Super-Rag Off-chain Memory
                     </div>
                   </div>
                 </div>
@@ -697,7 +696,7 @@ function App() {
                       
                     </h3>
                     <p className="text-sm mb-4" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                      Advanced AI consciousness studies
+                      
                     </p>
                     <div 
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200 group-hover:scale-110"
@@ -707,7 +706,7 @@ function App() {
                         boxShadow: '0 0 15px rgba(0, 191, 255, 0.5)'
                       }}
                     >
-                     RESEARCH STUDIES
+                    Super-Rag on-chain Memory
                     </div>
                   </div>
                 </div>
@@ -745,7 +744,7 @@ function App() {
                      
                     </h3>
                     <p className="text-sm mb-4" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                     Scaling through chosen partnerships.
+                    
                     </p>
                     <div 
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200 group-hover:scale-110"
@@ -755,7 +754,7 @@ function App() {
                         boxShadow: '0 0 15px rgba(138, 43, 226, 0.5)'
                       }}
                     >
-                      PARTNERSHIPS
+                     Reasoning Arc 
                     </div>
                   </div>
                 </div>
