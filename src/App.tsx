@@ -1046,7 +1046,7 @@ function App() {
                       letterSpacing: '1px'
                     }}
                   >
-                    AXI ASI (ALPHA)
+                    AXI LABS (ALPHA)
                   </span>
                 </div>
                 <div 
