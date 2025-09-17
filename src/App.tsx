@@ -423,6 +423,19 @@ function App() {
           
  
          
+              {/* Mechanical grid background */}
+              <div className="absolute inset-0 pointer-events-none opacity-10">
+                <div 
+                  style={{
+                    background: `
+                      linear-gradient(90deg, var(--accent) 1px, transparent 1px),
+                      linear-gradient(180deg, var(--accent) 1px, transparent 1px)
+                    `,
+                    backgroundSize: '30px 30px'
+                  }}
+                  className="w-full h-full"
+                />
+              </div>
 
               {/* Header */}
               <div className="text-center mb-8 relative z-10">
