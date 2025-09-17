@@ -492,7 +492,7 @@ function App() {
                   </div>
 
                   <div className="text-center">
-                    <div className="text-4xl mb-4">🧠</div>
+                    <div className="text-4xl mb-4"></div>
                     <h3 
                       className="text-xl font-bold mb-2"
                       style={{ 
@@ -540,7 +540,7 @@ function App() {
                   </div>
 
                   <div className="text-center">
-                    <div className="text-4xl mb-4">👾</div>
+                    <div className="text-4xl mb-4"></div>
                     <h3 
                       className="text-xl font-bold mb-2"
                       style={{ 
@@ -588,7 +588,7 @@ function App() {
                   </div>
 
                   <div className="text-center">
-                    <div className="text-4xl mb-4">🕹</div>
+                    <div className="text-4xl mb-4"></div>
                     <h3 
                       className="text-xl font-bold mb-2"
                       style={{ 
@@ -684,7 +684,7 @@ function App() {
                   </div>
 
                   <div className="text-center">
-                    <div className="text-4xl mb-4">🔬</div>
+                    <div className="text-4xl mb-4"></div>
                     <h3 
                       className="text-xl font-bold mb-2"
                       style={{ 
@@ -732,7 +732,7 @@ function App() {
                   </div>
 
                   <div className="text-center">
-                    <div className="text-4xl mb-4">🤝</div>
+                    <div className="text-4xl mb-4"></div>
                     <h3 
                       className="text-xl font-bold mb-2"
                       style={{ 
