@@ -122,7 +122,7 @@ export const HologramBrain: React.FC<HologramBrainProps> = ({ currentMode }) => 
           Clone Neural Network
         </div>
         <div className="text-sm" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-          Neural pathways connecting AXI clone consciousness
+          Neural pathways connecting AXI clone adapters
         </div>
         {isLoading && (
           <div className="text-xs mt-2 animate-pulse" style={{ color: 'var(--accent)', opacity: 0.6 }}>
