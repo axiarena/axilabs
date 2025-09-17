@@ -422,7 +422,7 @@ function App() {
        
           
  
-        
+       
               
           
 
@@ -442,7 +442,7 @@ function App() {
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                  
                 </div>
-              </div>
+            
 
               {/* 3x2 Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
