@@ -473,7 +473,7 @@ function App() {
                 {/* Row 1 */}
                 {/* Fitness */}
                 <div
-                  onClick={() => window.open(_blank)}
+                  onClick={() => window.open('', '_blank')}
                   className="group p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden"
                   style={{ 
                     backgroundColor: 'rgba(0, 255, 136, 0.1)',
@@ -515,6 +515,11 @@ function App() {
                       }}
                     >
                      Neural Clone Mapping
+                    </div>
+                    
+                    {/* Brain visualization with clone nodes */}
+                    <div className="mt-4">
+                      <HologramBrain currentMode={currentMode} />
                     </div>
                   </div>
                 </div>
