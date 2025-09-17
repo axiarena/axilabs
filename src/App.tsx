@@ -508,7 +508,7 @@ function App() {
                     
                     </p>
              <p className="text-lg font-bold" style={{ color: '#8a2be2', textShadow: '0 0 6px #8a2be2' }}>
-  Singularity Art
+  Singularity Arc
 </p>
                   </div>
                 </div>
