@@ -1246,7 +1246,7 @@ function App() {
                         fontFamily: 'Orbitron, monospace'
                       }}
                     >
-                      AXI ASI (ALPHA)
+                      AXI LABS (ALPHA)
                     </h1>
                   </div>
                 </div>
