@@ -422,10 +422,23 @@ function App() {
        
           
  
-       
+            {/* Futuristic Mechanical Sections Grid */}
+            <div 
+              className="w-full p-6 rounded-xl mb-6 relative overflow-hidden"
+              style={{ 
+                backgroundColor: '#0a1a2f',
+                boxShadow: '0 0 24px var(--accent-glow)',
+                border: '1px solid var(--accent)',
+                background: `
+                  radial-gradient(circle at 20% 80%, var(--accent)12 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, var(--accent)08 0%, transparent 50%),
+                  linear-gradient(135deg, rgba(10, 26, 47, 0.95) 0%, rgba(18, 42, 63, 0.95) 100%)
+                `
+              }}
+            >
               
           
-
+ 
               {/* Header */}
               <div className="text-center mb-8 relative z-10">
                 <div 
@@ -442,7 +455,7 @@ function App() {
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                  
                 </div>
-            
+              </div>
 
               {/* 3x2 Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
