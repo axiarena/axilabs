@@ -460,34 +460,10 @@ function App() {
               {/* 3x2 Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
                 {/* Row 1 */}
-                {/* Fitness */}
-                <div
-                  className="group p-6 rounded-xl border-2 relative overflow-hidden"
-                  style={{ 
-                    backgroundColor: 'rgba(0, 255, 136, 0.1)',
-                    borderColor: '#00ff88',
-                    boxShadow: '0 0 20px rgba(0, 255, 136, 0.3)'
-                  }}
-                >
-               
+            <div className="md:col-span-3">
+  <HologramBrain currentMode={currentMode} />
+</div>
 
-                  <div className="text-center">
-                    <div className="text-4xl mb-4"></div>
-                    <h3 
-                      className="text-xl font-bold mb-2"
-                      style={{ 
-                        color: '#00ff88',
-                        fontFamily: 'Orbitron, monospace',
-                        textShadow: '0 0 8px #00ff88'
-                      }}
-                    >
-                  
-                    </h3>
-             
-                    {/* Brain visualization with clone nodes */}
-                    <div className="mt-4">
-                      <HologramBrain currentMode={currentMode} />
-                    </div>
                   </div>
                 </div>
 
