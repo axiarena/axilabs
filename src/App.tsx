@@ -464,7 +464,7 @@ function App() {
                  🧬 6ixFold AGI Martix
                 </div>
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                  Access specialized modules -- Path from biology to immortality
+                 
                 </div>
               </div>
 
