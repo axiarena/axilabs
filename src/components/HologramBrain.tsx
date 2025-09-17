@@ -258,27 +258,6 @@ export const HologramBrain: React.FC<HologramBrainProps> = ({ currentMode }) => 
                 {connections.length}
               </div>
 
-              {/* Tooltip */}
-              <div 
-                className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10"
-                style={{ 
-                  backgroundColor: '#0a1a2f', 
-                  border: '1px solid var(--accent)',
-                  color: 'var(--accent)',
-                  minWidth: '160px'
-                }}
-              >
-                <div className="font-bold text-center">{clone.name}</div>
-                <div className="text-xs opacity-70 text-center">@{clone.handle}</div>
-                {!isLoading && (
-                  <div className="text-xs text-center mt-1">
-                    <div style={{ color: '#00ffaa' }}>● Active</div>
-                    <div>XP: {clone.cloneXP}</div>
-                    <div>Connections: {connections.length}</div>
-                    <div>Active Links: {activeConnections.length}</div>
-                  </div>
-                )}
-              </div>
             </div>
           );
         })}
