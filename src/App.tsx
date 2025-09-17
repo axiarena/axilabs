@@ -388,7 +388,7 @@ function App() {
                   letterSpacing: '2px'
                 }}
               >
-                AXI Immortality Project
+                AXI Singularity
               </h1>
               
               <p 
