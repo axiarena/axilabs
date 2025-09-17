@@ -507,7 +507,9 @@ function App() {
                     <p className="text-sm mb-4" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                     
                     </p>
-             
+             <p className="text-lg font-bold" style={{ color: '#8a2be2', textShadow: '0 0 6px #8a2be2' }}>
+  Singularity Art
+</p>
                   </div>
                 </div>
               </div>
