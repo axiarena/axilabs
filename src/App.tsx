@@ -590,7 +590,7 @@ function App() {
                 }}
               >
                 <div className="text-sm font-bold">
-                   AGI Matrix Portal
+                   AXI AGI Matrix Portal
                 </div>
                 <div className="text-xs mt-2 opacity-80">
                   System Pressure: 100% | Modules: 6 | Interface: ONLINE
