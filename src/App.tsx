@@ -445,7 +445,7 @@ function App() {
                   className="text-2xl lg:text-3xl font-bold mb-2"
                   style={{ 
                     color: 'var(--accent)', 
-                    textShadow: '0 0 19px var(--accent)',
+                    textShadow: '0 0 25px var(--accent)',
                     fontFamily: 'Orbitron, monospace',
                     letterSpacing: '2px'
                   }}
