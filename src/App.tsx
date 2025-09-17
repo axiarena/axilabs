@@ -461,7 +461,7 @@ function App() {
                     letterSpacing: '2px'
                   }}
                 >
-                 🧬 6ixFold AGI Martix
+                 🧬 To Delete
                 </div>
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                  
