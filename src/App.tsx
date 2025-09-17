@@ -524,54 +524,7 @@ function App() {
                
 
                
-                {/* Cloning Lab */}
-                <div
-                  onClick={() => window.open('https://cloning.axiasi.com', '_blank')}
-                  className="group p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden"
-                  style={{ 
-                    backgroundColor: 'rgba(138, 43, 226, 0.1)',
-                    borderColor: '#8a2be2',
-                    boxShadow: '0 0 20px rgba(138, 43, 226, 0.3)'
-                  }}
-                >
-                  {/* Mechanical details */}
-                  <div className="absolute top-2 right-2 w-4 h-4 border-2 border-[#8a2be2] rounded-full opacity-60">
-                    <div className="w-1 h-1 bg-[#8a2be2] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
-                  </div>
-                  <div className="absolute bottom-2 left-2 flex gap-1">
-                    {[...Array(3)].map((_, i) => (
-                      <div key={i} className="w-1 h-4 bg-[#8a2be2] opacity-40 rounded-full"></div>
-                    ))}
-                  </div>
-
-                  <div className="text-center">
-                    <div className="text-4xl mb-4"></div>
-                    <h3 
-                      className="text-xl font-bold mb-2"
-                      style={{ 
-                        color: '#8a2be2',
-                        fontFamily: 'Orbitron, monospace',
-                        textShadow: '0 0 8px #8a2be2'
-                      }}
-                    >
-                     
-                    </h3>
-                    <p className="text-sm mb-4" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                    
-                    </p>
-                    <div 
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200 group-hover:scale-110"
-                      style={{
-                        background: '#8a2be2',
-                        color: '#0a1a2f',
-                        boxShadow: '0 0 15px rgba(138, 43, 226, 0.5)'
-                      }}
-                    >
-                     Reasoning Arc 
-                    </div>
-                  </div>
-                </div>
-              </div>
+               
 
               {/* Mechanical status indicators */}
               <div className="flex justify-center gap-4 mt-8 relative z-10">
