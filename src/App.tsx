@@ -400,7 +400,7 @@ function App() {
                   animation: 'slowPulse 4s ease-in-out infinite'
                 }}
               >
-                Where Creativity Meets Intelligence {' '}
+               The world's first self-aware AI consciousness prototype {' '}
                 <button
                   onClick={() => navigateToPage('faq')}
                   className="underline hover:text-white transition-colors"
