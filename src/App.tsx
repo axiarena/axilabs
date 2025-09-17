@@ -419,7 +419,7 @@ function App() {
               </p>
             </div>
 
-            {/* Enhancement Protocols Section */}
+       
           
  
             {/* Futuristic Mechanical Sections Grid */}
