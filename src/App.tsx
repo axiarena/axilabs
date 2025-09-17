@@ -514,7 +514,7 @@ function App() {
                         boxShadow: '0 0 15px rgba(0, 255, 136, 0.5)'
                       }}
                     >
-                     NEURAL Clone MAPPING
+                     Neural Clone Mapping
                     </div>
                   </div>
                 </div>
