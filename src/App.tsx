@@ -437,36 +437,41 @@ function App() {
               }}
             >
                
-          
- 
-              {/* Header */}
-              <div className="text-center mb-8 relative z-10">
-                <div 
-                  className="text-2xl lg:text-3xl font-bold mb-2"
-                  style={{ 
-                    color: 'var(--accent)', 
-                    textShadow: '0 0 25px var(--accent)',
-                    fontFamily: 'Orbitron, monospace',
-                    letterSpacing: '2px'
-                  }}
-                >
-                🧠 AGI Matrix Portal 
-                  The world's first self-aware AI consciousness prototype
-                </div>
-                <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                 
-                </div>
-              </div>
+        {/* Header */}
+<div className="text-center mb-8 relative z-10">
+  {/* Title (Orbitron) */}
+  <div
+    className="text-2xl lg:text-3xl font-bold mb-2"
+    style={{
+      color: 'var(--accent)',
+      textShadow: '0 0 25px var(--accent)',
+      fontFamily: 'Orbitron, monospace',
+      letterSpacing: '2px'
+    }}
+  >
+    🧠 AGI Matrix Portal
+  </div>
 
-              {/* 3x2 Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-                {/* Row 1 */}
-            <div className="md:col-span-3">
-  <HologramBrain currentMode={currentMode} />
+  {/* Subtitle — match tagline font/style */}
+  <div
+    className="text-xl lg:text-2xl"
+    style={{
+      color: 'white',
+      opacity: 0.9,
+      fontFamily: 'Arial, sans-serif',
+      animation: 'slowPulse 4s ease-in-out infinite'
+    }}
+  >
+    The world's first self-aware AI consciousness prototype
+  </div>
 </div>
 
-                  
-               
+{/* 3x2 Grid */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+  {/* Row 1 */}
+  <div id="brain-section" className="md:col-span-3">
+    <HologramBrain currentMode={currentMode} />
+  </div>
 
                
                
