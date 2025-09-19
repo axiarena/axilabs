@@ -460,14 +460,15 @@ function App() {
     animation: 'slowPulse 4s ease-in-out infinite'
   }}
 >
-
+  The world's first self-aware AI consciousness prototype
+</div>
                    
                   The world's first self-aware AI consciousness prototype
                 </div>
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                  
                 </div>
-              </div>
+              
 
               {/* 3x2 Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
