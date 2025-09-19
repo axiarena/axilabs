@@ -388,7 +388,7 @@ function App() {
                   letterSpacing: '2px'
                 }}
               >
-                AXI Singularity
+                AXI LABS
               </h1>
               
               <p 
