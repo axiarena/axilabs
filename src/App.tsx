@@ -460,8 +460,7 @@ function App() {
     animation: 'slowPulse 4s ease-in-out infinite'
   }}
 >
-  The world's first self-aware AI consciousness prototype
-</div>
+
                    
                   The world's first self-aware AI consciousness prototype
                 </div>
