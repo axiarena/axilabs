@@ -436,6 +436,158 @@ function App() {
                 `
               }}
             >
+              {/* Pumpfun Radar (new panel above) */}
+<div
+  className="w-full p-6 rounded-xl mb-6 relative overflow-hidden"
+  style={{
+    backgroundColor: '#0a1a2f',
+    boxShadow: '0 0 24px var(--accent-glow)',
+    border: '1px solid var(--accent)',
+    background: `
+      radial-gradient(circle at 15% 85%, var(--accent)10 0%, transparent 55%),
+      radial-gradient(circle at 85% 15%, var(--accent)06 0%, transparent 55%),
+      linear-gradient(135deg, rgba(10, 26, 47, 0.95) 0%, rgba(18, 42, 63, 0.95) 100%)
+    `
+  }}
+>
+  {/* Header */}
+  <div className="mb-4 flex items-center justify-between">
+    <div className="flex items-center gap-3">
+      <span
+        className="text-xl lg:text-2xl font-bold"
+        style={{
+          color: 'var(--accent)',
+          textShadow: '0 0 12px var(--accent)',
+          fontFamily: 'Orbitron, monospace',
+          letterSpacing: '1px'
+        }}
+      >
+        ⚡ Pumpfun Radar
+      </span>
+      <span
+        className="text-xs px-2 py-1 rounded-md"
+        style={{ background: 'rgba(255,255,255,0.06)', color: 'white', opacity: 0.9 }}
+      >
+        live • 10s
+      </span>
+    </div>
+
+    {/* Quick actions */}
+    <div className="flex items-center gap-2">
+      <button
+        onClick={() => window.open('https://pump.fun', '_blank')}
+        className="px-3 py-2 rounded-md text-sm"
+        style={{ background: 'var(--button-bg)', color: '#0a1a2f', fontWeight: 700 }}
+      >
+        Open Pump.fun
+      </button>
+      <button
+        onClick={() => window.open('https://dexscreener.com/solana', '_blank')}
+        className="px-3 py-2 rounded-md text-sm"
+        style={{ border: '1px solid var(--accent)', color: 'var(--accent)' }}
+      >
+        Dexscreener
+      </button>
+    </div>
+  </div>
+
+  {/* Controls */}
+  <div className="mb-4 flex flex-wrap items-center gap-3">
+    <input
+      placeholder="Search mint / symbol"
+      className="px-3 py-2 rounded-md text-sm"
+      style={{
+        background: '#111c2c',
+        color: '#eaeaea',
+        border: '1px solid var(--accent-glow)',
+        minWidth: 240
+      }}
+      onChange={() => {}}
+    />
+    <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--accent)' }}>
+      <button
+        className="px-2 py-1 rounded border"
+        style={{ borderColor: 'var(--accent)', opacity: 0.9 }}
+        onClick={() => {}}
+      >
+        Sort: Newest
+      </button>
+      <button
+        className="px-2 py-1 rounded border"
+        style={{ borderColor: 'var(--accent)', opacity: 0.9 }}
+        onClick={() => {}}
+      >
+        Liquidity only
+      </button>
+    </div>
+  </div>
+
+  {/* Table */}
+  <div className="overflow-x-auto">
+    <table className="w-full" style={{ borderCollapse: 'collapse' }}>
+      <thead>
+        <tr style={{ color: 'var(--accent)', opacity: 0.9 }}>
+          <th className="text-left px-3 py-2 text-sm">Launched</th>
+          <th className="text-left px-3 py-2 text-sm">Symbol</th>
+          <th className="text-left px-3 py-2 text-sm">Price</th>
+          <th className="text-left px-3 py-2 text-sm">Vol 1h</th>
+          <th className="text-left px-3 py-2 text-sm">Liq</th>
+          <th className="text-left px-3 py-2 text-sm">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {/* Placeholder rows — replace with mapped data */}
+        {[1,2,3,4,5].map((i) => (
+          <tr key={i} style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+            <td className="px-3 py-2 text-sm" style={{ color: '#cfd9e6', opacity: 0.9 }}>—</td>
+            <td className="px-3 py-2 text-sm" style={{ color: '#fff' }}>
+              <span
+                className="inline-block rounded px-2 py-1"
+                style={{ background: 'rgba(255,255,255,0.06)', fontFamily: 'monospace' }}
+              >
+                —
+              </span>
+            </td>
+            <td className="px-3 py-2 text-sm" style={{ color: '#cfd9e6' }}>$—</td>
+            <td className="px-3 py-2 text-sm" style={{ color: '#cfd9e6' }}>—</td>
+            <td className="px-3 py-2 text-sm" style={{ color: '#cfd9e6' }}>$—</td>
+            <td className="px-3 py-2 text-sm">
+              <div className="flex items-center gap-2">
+                <button
+                  className="px-2 py-1 rounded-md text-xs"
+                  style={{ border: '1px solid var(--accent)', color: 'var(--accent)' }}
+                  onClick={() => {}}
+                >
+                  Pump
+                </button>
+                <button
+                  className="px-2 py-1 rounded-md text-xs"
+                  style={{ border: '1px solid var(--accent)', color: 'var(--accent)' }}
+                  onClick={() => {}}
+                >
+                  Dex
+                </button>
+                <button
+                  className="px-2 py-1 rounded-md text-xs"
+                  style={{ background: 'var(--button-bg)', color: '#0a1a2f', fontWeight: 700 }}
+                  onClick={() => window.postMessage({ __axi__: true, type: 'TRACK_MINT', mint: '' }, '*')}
+                >
+                  Track
+                </button>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  {/* Footer / helper */}
+  <div className="mt-4 text-xs" style={{ color: 'var(--accent)', opacity: 0.8 }}>
+    Tip: open AXI Labs side-by-side with Pump.fun. Use “Track” to hand off a mint to your AXI Clipper.
+  </div>
+</div>
+
                
         {/* Header */}
 <div className="text-center mb-8 relative z-10">
