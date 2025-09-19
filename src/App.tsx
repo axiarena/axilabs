@@ -462,7 +462,7 @@ function App() {
           letterSpacing: '1px'
         }}
       >
-        ⚡ Pumpfun Radar (alpha test)
+        ⚡ Pumpfun Radar (test)
       </span>
       <span
         className="text-xs px-2 py-1 rounded-md"
