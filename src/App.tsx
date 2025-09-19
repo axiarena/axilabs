@@ -450,7 +450,9 @@ function App() {
                     letterSpacing: '2px'
                   }}
                 >
-                🧠 AGI Matrix Portal </h1>
+                🧠 AGI Matrix Portal
+
+                        </h1>
               
               <p 
                 className="text-xl lg:text-2xl mb-8"
