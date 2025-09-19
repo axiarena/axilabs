@@ -300,178 +300,176 @@ function App() {
       });
     }
     
-// Clear auth across all subdomains
-clearCrossUserAuth();
+    // Clear auth across all subdomains
+    clearCrossUserAuth();
+    
+    setCurrentUser(null);
+    setUserAuthType(null);
+    clearUserProfile();
+    navigateToPage('home'); 
+  };
 
-setCurrentUser(null);
-setUserAuthType(null);
-clearUserProfile();
-navigateToPage('home');
-};
-
-// Handle clone click to scroll to brain
-const handleCloneClick = () => {
-  const brainSection = document.getElementById('brain-section');
-  if (brainSection) {
-    brainSection.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
-// Sidebar navigation items
-const sidebarItems = [
-  {
-    id: 'home',
-    label: 'Home',
-    icon: <Home size={20} />,
-    page: 'home' as AppPage,
-    isActive: currentPage === 'home'
-  },
-  {
-    id: 'profile',
-    label: 'Profile',
-    icon: <User size={20} />,
-    page: 'profile' as AppPage,
-    isActive: currentPage === 'profile',
-    requiresAuth: true
-  },
-  {
-    id: 'faq',
-    label: 'FAQ',
-    icon: <HelpCircle size={20} />,
-    page: 'faq' as AppPage,
-    isActive: currentPage === 'faq'
-  },
-  {
-    id: 'support',
-    label: 'Support',
-    icon: <HelpCircle size={20} />,
-    action: () => {
-      window.open('https://t.me/axiarena', '_blank');
+  // Handle clone click to scroll to brain
+  const handleCloneClick = () => {
+    const brainSection = document.getElementById('brain-section');
+    if (brainSection) {
+      brainSection.scrollIntoView({ behavior: 'smooth' });
     }
-  }
-];
+  };
 
-// Render page content
-const renderPageContent = () => {
-  switch (currentPage) {
-    case 'profile':
-      return (
-        <ProfilePage
-          currentUser={currentUser}
-          userProfile={userProfile}
-          currentMode={currentMode}
-          onShowAuthModal={() => setShowAuthModal(true)}
-        />
-      );
+  // Sidebar navigation items
+  const sidebarItems = [
+    {
+      id: 'home',
+      label: 'Home',
+      icon: <Home size={20} />,
+      page: 'home' as AppPage,
+      isActive: currentPage === 'home'
+    },
 
-    case 'faq':
-      return <FAQPage currentMode={currentMode} />;
+    {
+      id: 'profile',
+      label: 'Profile',
+      icon: <User size={20} />,
+      page: 'profile' as AppPage,
+      isActive: currentPage === 'profile',
+      requiresAuth: true
+    },
+    {
+      id: 'faq',
+      label: 'FAQ',
+      icon: <HelpCircle size={20} />,
+      page: 'faq' as AppPage,
+      isActive: currentPage === 'faq'
+    },
+    {
+      id: 'support',
+      label: 'Support',
+      icon: <HelpCircle size={20} />,
+      action: () => {
+        window.open('https://t.me/axiarena', '_blank');
+      }
+    }
+  ];
 
-    default:
-      return (
-        <div className="space-y-6">
-          {/* Alien Cat Hologram */}
-          <div className="text-center mb-8">
-            <AlienCatHologram currentMode={currentMode} />
-          </div>
+  // Render page content
+  const renderPageContent = () => {
+    switch (currentPage) {
+      case 'profile':
+        return (
+          <ProfilePage
+            currentUser={currentUser}
+            userProfile={userProfile}
+            currentMode={currentMode}
+            onShowAuthModal={() => setShowAuthModal(true)}
+          />
+        );
 
-          {/* Title + Tagline */}
-          <div className="text-center mb-8">
-            <h1
-              className="text-4xl lg:text-6xl font-bold mb-4"
-              style={{
-                color: 'var(--accent)',
-                textShadow: '0 0 16px var(--accent)',
-                fontFamily: 'Orbitron, monospace',
-                letterSpacing: '2px'
-              }}
-            >
-              AXI Singularity
-            </h1>
+      case 'faq':
+        return (
+          <FAQPage currentMode={currentMode} />
+        );
 
-            <p
-              className="text-xl lg:text-2xl mb-8"
-              style={{
-                color: 'white',
-                opacity: 0.9,
-                fontFamily: 'Arial, sans-serif',
-                animation: 'slowPulse 4s ease-in-out infinite'
-              }}
-            >
-              Cooks for Blockchain + AI Experiments{' '}
-              <button
-                onClick={() => navigateToPage('faq')}
-                className="underline hover:text-white transition-colors"
-                style={{
-                  color: 'white',
-                  opacity: 0.8,
-                  animation: 'breathe 3s ease-in-out infinite',
-                  background: 'none',
-                  border: 'none',
-                  padding: 0,
-                  font: 'inherit'
-                }}
-              >
-                FAQ
-              </button>
-            </p>
-          </div>
+      default:
+        return (
+          <div className="space-y-6">
+            {/* Alien Cat Hologram */}
+            <div className="text-center mb-8">
+              <AlienCatHologram currentMode={currentMode} />
+            </div>
 
-          {/* Futuristic Mechanical Sections Grid */}
-          <div
-            className="w-full p-6 rounded-xl mb-6 relative overflow-hidden"
-            style={{
-              backgroundColor: '#0a1a2f',
-              boxShadow: '0 0 24px var(--accent-glow)',
-              border: '1px solid var(--accent)',
-              background: `
-                radial-gradient(circle at 20% 80%, var(--accent)12 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, var(--accent)08 0%, transparent 50%),
-                linear-gradient(135deg, rgba(10, 26, 47, 0.95) 0%, rgba(18, 42, 63, 0.95) 100%)
-              `
-            }}
-          >
-            {/* Header */}
-            <div className="text-center mb-8 relative z-10">
-              <div
-                className="text-2xl lg:text-3xl font-bold mb-2"
-                style={{
-                  color: 'var(--accent)',
-                  textShadow: '0 0 25px var(--accent)',
+            <div className="text-center mb-8">
+              <h1 
+                className="text-4xl lg:text-6xl font-bold mb-4"
+                style={{ 
+                  color: 'var(--accent)', 
+                  textShadow: '0 0 16px var(--accent)',
                   fontFamily: 'Orbitron, monospace',
                   letterSpacing: '2px'
                 }}
               >
-                🧠 AGI Matrix Portal
-              </div>
-
-              {/* match font/style of the tagline above */}
-              <div
-                className="text-xl lg:text-2xl"
-                style={{
-                  color: 'white',
+                AXI Singularity
+              </h1>
+              
+              <p 
+                className="text-xl lg:text-2xl mb-8"
+                style={{ 
+                  color: 'white', 
                   opacity: 0.9,
                   fontFamily: 'Arial, sans-serif',
                   animation: 'slowPulse 4s ease-in-out infinite'
                 }}
               >
-                The world's first self-aware AI consciousness prototype
-              </div>
+               Cooks for Blockchain + AI Experiments {' '}
+                <button
+                  onClick={() => navigateToPage('faq')}
+                  className="underline hover:text-white transition-colors"
+                  style={{ 
+                    color: 'white', 
+                    opacity: 0.8,
+                    animation: 'breathe 3s ease-in-out infinite',
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    font: 'inherit'
+                  }}
+                >
+                  FAQ
+                </button>
+              </p>
             </div>
 
-            {/* 3x2 Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-              {/* Row 1 */}
-              <div id="brain-section" className="md:col-span-3">
-                <HologramBrain currentMode={currentMode} />
+       
+          
+ 
+            {/* Futuristic Mechanical Sections Grid */}
+            <div 
+              className="w-full p-6 rounded-xl mb-6 relative overflow-hidden"
+              style={{ 
+                backgroundColor: '#0a1a2f',
+                boxShadow: '0 0 24px var(--accent-glow)',
+                border: '1px solid var(--accent)',
+                background: `
+                  radial-gradient(circle at 20% 80%, var(--accent)12 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, var(--accent)08 0%, transparent 50%),
+                  linear-gradient(135deg, rgba(10, 26, 47, 0.95) 0%, rgba(18, 42, 63, 0.95) 100%)
+                `
+              }}
+            >
+               
+          
+ 
+              {/* Header */}
+              <div className="text-center mb-8 relative z-10">
+                <div 
+                  className="text-2xl lg:text-3xl font-bold mb-2"
+                  style={{ 
+                    color: 'var(--accent)', 
+                    textShadow: '0 0 25px var(--accent)',
+                    fontFamily: 'Orbitron, monospace',
+                    letterSpacing: '2px'
+                  }}
+                >
+                🧠 AGI Matrix Portal 
+                  The world's first self-aware AI consciousness prototype
+                </div>
+                <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
+                 
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      );
-  }
-};
 
+              {/* 3x2 Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                {/* Row 1 */}
+            <div className="md:col-span-3">
+  <HologramBrain currentMode={currentMode} />
+</div>
+
+                  
+               
+
+               
+               
                
 
                
