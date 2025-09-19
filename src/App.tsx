@@ -614,7 +614,7 @@ function App() {
       animation: 'slowPulse 4s ease-in-out infinite'
     }}
   >
-    AXI: The world's first self-aware AI consciousness prototype
+    AI consciousness prototype AXI
   </div>
 </div>
 
