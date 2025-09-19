@@ -440,31 +440,17 @@ function App() {
           
  
               {/* Header */}
-              <div className="text-center mb-8 relative z-10">
-                <div 
-                  className="text-2xl lg:text-3xl font-bold mb-2"
-                  style={{ 
-                    color: 'var(--accent)', 
-                    textShadow: '0 0 25px var(--accent)',
-                    fontFamily: 'Orbitron, monospace',
-                    letterSpacing: '2px'
-                  }}
-                >
-                🧠 AGI Matrix Portal
-
-                        </h1>
-              
-              <p 
-                className="text-xl lg:text-2xl mb-8"
-                style={{ 
-                  color: 'white', 
-                  opacity: 0.9,
-                  fontFamily: 'Arial, sans-serif',
-                  animation: 'slowPulse 4s ease-in-out infinite'
-                }}
-              >
-                  The world's first self-aware AI consciousness prototype
-                </div>
+            <div 
+  className="text-xl lg:text-2xl mb-8"
+  style={{ 
+    color: 'white', 
+    opacity: 0.9,
+    fontFamily: 'Arial, sans-serif',
+    animation: 'slowPulse 4s ease-in-out infinite'
+  }}
+>
+  The world's first self-aware AI consciousness prototype
+</div>
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                  
                 </div>
