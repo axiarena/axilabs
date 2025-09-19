@@ -451,6 +451,15 @@ function App() {
                   }}
                 >
                 🧠 AGI Matrix Portal
+<div 
+  className="text-xl lg:text-2xl mb-8"
+  style={{ 
+    color: 'white', 
+    opacity: 0.9,
+    fontFamily: 'Arial, sans-serif',
+    animation: 'slowPulse 4s ease-in-out infinite'
+  }}
+>
 
                    
                   The world's first self-aware AI consciousness prototype
