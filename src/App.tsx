@@ -400,7 +400,7 @@ function App() {
                   animation: 'slowPulse 4s ease-in-out infinite'
                 }}
               >
-               The world's first self-aware AI consciousness prototype {' '}
+               Cooks for Blockchain + AI Experiments {' '}
                 <button
                   onClick={() => navigateToPage('faq')}
                   className="underline hover:text-white transition-colors"
