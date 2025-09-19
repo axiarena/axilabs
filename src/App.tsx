@@ -463,7 +463,7 @@ function App() {
 
                    
                   The world's first self-aware AI consciousness prototype
-                </div>
+                
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                  
                 </div>
