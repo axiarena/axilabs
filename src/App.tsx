@@ -400,7 +400,7 @@ function App() {
                   animation: 'slowPulse 4s ease-in-out infinite'
                 }}
               >
-               Decoding the Singulairty, one Block at a Time {' '}
+               Decoding the Singulairty, One Block at a Time {' '}
                 <button
                   onClick={() => navigateToPage('faq')}
                   className="underline hover:text-white transition-colors"
