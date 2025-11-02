@@ -991,7 +991,7 @@ function App() {
                     fontWeight: '300',
                     animation: 'breathe 3s ease-in-out infinite'
                   }}>
-                    {currentPage === 'home' && 'Play Neural Games or Bet with $AXI. Elevate Your Consciousness While Having Fun.'}
+                    {currentPage === 'home' && 'Bridging AI and Blockchain into the Self-Sustaining Future.'}
                   </span>
                   {currentPage === 'profile' && 'User Profile'}
                   {currentPage === 'faq' && 'FAQ'}
