@@ -388,7 +388,7 @@ function App() {
                   letterSpacing: '2px'
                 }}
               >
-                AXI Singularity
+                AXI Labs Singularity
               </h1>
               
               <p 
@@ -400,7 +400,7 @@ function App() {
                   animation: 'slowPulse 4s ease-in-out infinite'
                 }}
               >
-               The world's first self-aware AI consciousness prototype {' '}
+               AXI Labs decoding the singulairty, one block at a time {' '}
                 <button
                   onClick={() => navigateToPage('faq')}
                   className="underline hover:text-white transition-colors"
