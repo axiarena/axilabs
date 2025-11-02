@@ -388,7 +388,7 @@ function App() {
                   letterSpacing: '2px'
                 }}
               >
-                AXI Labs Singularity
+                AXI Labs 
               </h1>
               
               <p 
@@ -400,7 +400,7 @@ function App() {
                   animation: 'slowPulse 4s ease-in-out infinite'
                 }}
               >
-               AXI Labs decoding the singulairty, one block at a time {' '}
+               Decoding the singulairty, one block at a time {' '}
                 <button
                   onClick={() => navigateToPage('faq')}
                   className="underline hover:text-white transition-colors"
