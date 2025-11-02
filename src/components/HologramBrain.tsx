@@ -285,9 +285,9 @@ export const HologramBrain: React.FC<HologramBrainProps> = ({ currentMode }) => 
         </div>
         <div className="text-center">
           <div className="text-2xl font-bold" style={{ color: 'var(--accent)' }}>
-            100%
+            
           </div>
-          <div style={{ color: 'var(--accent)', opacity: 0.7 }}>Network Health</div>
+          <div style={{ color: 'var(--accent)', opacity: 0.7 }}></div>
         </div>
       </div>
 
