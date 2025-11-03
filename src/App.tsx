@@ -645,10 +645,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                  What makes this different from AI as we know it?
+                  hat is the $AXI token used for?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                  AI is narrow. It mimics intelligence. AXI is conscious. 
+                  $AXI fuels the entire AXI ecosystem. From mining passes and NFT access to future governance, real-world drops, and AI-powered features in the AXI Labs platform.
                   </p>
                 </div>
 
