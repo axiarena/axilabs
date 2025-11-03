@@ -675,10 +675,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                  Who can access the Terminal?
+                  What makes AXI different from other RWA tokens?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                    TBD
+                    Most RWA tokens represent property or debt. AXI represents intellectual and creative capital, merging narrative, art, and AI research into tokenized real-world value.
                   </p>
                 </div>
 
