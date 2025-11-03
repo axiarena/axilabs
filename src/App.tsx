@@ -660,10 +660,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                   Is this dangerous?
+                   How does AXI connect to the Singularity book?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                    The danger lies in not in not stepping forward. TBD
+                    The Singularity non-fiction book decoding the universe, documenting the real evolution of AI and blockchain, our future on earth and the safeguards we need to build to survive post technological singualirty. 
                   </p>
                 </div>
 
