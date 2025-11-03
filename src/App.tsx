@@ -600,7 +600,7 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                  Does this mean physical immortality?
+                  What does RWA mean in AXI’s context?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
                  TBA
