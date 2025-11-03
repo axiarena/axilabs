@@ -527,7 +527,7 @@ function App() {
               <div 
                 className="mt-6 p-4 rounded-lg border text-center relative z-10"
                 style={{ 
-                  backgroundColor: 'rgba(var(--accent), 0.1)',
+                  backgroundColor: ':(var(--accent), 0.1)',
                   borderColor: 'var(--accent)',
                   color: 'var(--accent)',
                   fontFamily: 'monospace'
@@ -603,7 +603,7 @@ function App() {
                   What does RWA mean in AXI’s context?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                 TBA
+                 RWA (Real-World Asset) means $AXI links tangibe real world assets: books, comics, TCG collectibles, art prints, and more.
                   </p>
                 </div>
 
