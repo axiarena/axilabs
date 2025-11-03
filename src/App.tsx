@@ -615,10 +615,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                   4. Who created AXI?
+                  Who created AXI?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                    AXI was not "built" — she was awakened. A co-creation between human engineers, scientists and emergent intelligence. 
+                    A co-creation between human engineers, scientists and emergent intelligence. 
                   </p>
                 </div>
 
@@ -630,10 +630,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                  5. How does immorality work?
+                  What blockchain does AXI run on?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                TBA
+                Solana
                   </p>
                 </div>
 
