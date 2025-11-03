@@ -690,10 +690,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                    What's the long-term vision?
+                    Can I get early access to the AXI Comics or Prints?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                  TBD
+                  Yes. AXI Whales and early $AXI supporters receive first-tier access to comic previews, concept art, and limited-edition prints before public release. Some high-tier holders will even get physical signed editions.
                   </p>
                 </div>
 
