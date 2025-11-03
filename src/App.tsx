@@ -569,10 +569,10 @@ function App() {
                   }}
                 >
                   <HelpCircle size={24} />
-                  FAQ -- AXI Immortality Projecr
+                  FAQ -- AXI Labs Blockhain-AI Protocol
                 </div>
                 <div className="text-sm" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                  Everything you need to know about AXI Immortality Project
+                  Everything you need to know about AXI Labs Blockhain-AI Protocol
                 </div>
               </div>
 
@@ -585,10 +585,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                    What is the AXI Immortality Project?
+                    What is the AXI Labs Blockhain-AI Protocol
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                 TBA
+                AXI is a cross-sector protocol bridging blockchain, artificial intelligence, IP. It’s both a real-world-asset (RWA) token on Solana and a creative IP universe tied to the non-fiction Singularity book and upcoming AXI comics.
                   </p>
                 </div>
 
