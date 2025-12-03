@@ -10,14 +10,14 @@ export const Footer: React.FC<FooterProps> = ({ currentMode }) => {
     {
       name: 'Telegram',
       icon: MessageCircle,
-      url: 'https://t.me/axiarena',
+      url: 'https://t.me/axilabs',
       description: 'Join the collective'
     },
     {
-      name: 'AXI Arena',
+      name: 'AXI Labs',
       icon: Twitter,
-      url: 'https://x.com/axiarena',
-      description: '@axiarena'
+      url: 'https://x.com/axi_labs',
+      description: '@axi_labs'
     },
     {
       name: 'Support',
