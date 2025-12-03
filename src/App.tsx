@@ -497,7 +497,7 @@ function App() {
                     <h3 
                       className="text-xl font-bold mb-2"
                       style={{ 
-                        color: '#8a2be2',
+                        color: 'var(--accent)',
                         fontFamily: 'Orbitron, monospace',
                         textShadow: 'var(--accent)'
                       }}
