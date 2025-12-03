@@ -515,7 +515,6 @@ function App() {
                         boxShadow: '0 0 15px rgba(138, 43, 226, 0.5)'
                       }}
                     >
-                     Reasoning Arc 
                     </div>
                   </div>
                 </div>
