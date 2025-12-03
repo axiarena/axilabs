@@ -414,7 +414,7 @@ function App() {
                     font: 'inherit'
                   }}
                 >
-                  FAQ
+                  
                 </button>
               </p>
             </div>
