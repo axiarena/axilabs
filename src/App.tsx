@@ -515,7 +515,7 @@ function App() {
     boxShadow: 'var(--accent-glow)'
                       }}
                     >
-                      Trading Card Game (TCG)
+                    AXI Trading Card Game (TCG)
                     </div>
                   </div>
                 </div>
