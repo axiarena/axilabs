@@ -400,7 +400,7 @@ function App() {
                   animation: 'slowPulse 4s ease-in-out infinite'
                 }}
               >
-               Decoding the Singulairty, One Block at a Time {' '}
+               Engineering the Future of Culture Through Predictive AI and Decentralized Technology. {' '}
                 <button
                   onClick={() => navigateToPage('faq')}
                   className="underline hover:text-white transition-colors"
@@ -991,7 +991,7 @@ function App() {
                     fontWeight: '300',
                     animation: 'breathe 3s ease-in-out infinite'
                   }}>
-                    {currentPage === 'home' && 'Bridging AI and Blockchain into the Self-Sustaining Future.'}
+                    {currentPage === 'home' && 'The Axis of Truth: Where the Future of Intelligence, Blockchain and Culture Converge.'}
                   </span>
                   {currentPage === 'profile' && 'User Profile'}
                   {currentPage === 'faq' && 'FAQ'}
