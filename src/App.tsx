@@ -512,7 +512,7 @@ function App() {
                       style={{
                         background: '#8a2be2',
                         color: '#0a1a2f',
-                        boxShadow: 'var(--accent-glow)'
+    boxShadow: 'var(--accent-glow)'
                       }}
                     >
                       Trading Card Game (TCG)
