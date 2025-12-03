@@ -499,7 +499,7 @@ function App() {
                       style={{ 
                         color: '#8a2be2',
                         fontFamily: 'Orbitron, monospace',
-                        textShadow: '0 0 8px #8a2be2'
+                        textShadow: 'var(--accent)'
                       }}
                     >
                      
