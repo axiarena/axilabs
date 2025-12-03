@@ -511,7 +511,7 @@ function App() {
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200 group-hover:scale-110"
                       style={{
                         background: '#8a2be2',
-                        color: '#0a1a2f',
+                        color: '#8a2be2',
                         boxShadow: '0 0 15px rgba(138, 43, 226, 0.5)'
                       }}
                     >
