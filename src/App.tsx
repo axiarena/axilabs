@@ -478,7 +478,7 @@ function App() {
                   className="group p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden"
                   style={{ 
                     backgroundColor: 'rgba(138, 43, 226, 0.1)',
-                    borderColor: '#8a2be2',
+                    borderColor: 'var(--accent)',
                     boxShadow: '0 0 20px rgba(138, 43, 226, 0.3)'
                   }}
                 >
