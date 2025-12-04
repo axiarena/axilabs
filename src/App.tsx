@@ -1,8 +1,33 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { User, LogOut, Menu, X, Eye, Cpu, Zap, Crown, Trophy, Palette, Share2, Coins, Book, Brain, Gamepad2, Home, Settings, HelpCircle, MoreHorizontal, ChevronLeft, ChevronRight, Users } from 'lucide-react';
+import { 
+  User, 
+  LogOut, 
+  Menu, 
+  X, 
+  Eye, 
+  Cpu, 
+  Zap, 
+  Crown, 
+  Trophy, 
+  Palette, 
+  Share2, 
+  Coins, 
+  Book, 
+  Brain, 
+  Gamepad2, 
+  Home, 
+  Settings, 
+  HelpCircle, 
+  MoreHorizontal, 
+  ChevronLeft, 
+  ChevronRight, 
+  Users,
+  Database 
+} from 'lucide-react';
 import { AuthModal } from './components/AuthModal';
 import { MoodSelector } from './components/MoodSelector';
 import { TrophySystem } from './components/TrophySystem';
+import AxiLabsStrip from './components/AxiLabsStrip';
 import { HologramGirl } from './components/HologramGirl';
 import { HologramBrain } from './components/HologramBrain';
 import { CloneStatusGrid } from './components/CloneStatusGrid';
@@ -25,7 +50,6 @@ import { Mode, AppPage, UserProfile } from './types/shader';
 import { initAutoSync, stopAutoSync } from './lib/autoSync';
 import { syncUserAuth, getCrossUserAuth, clearCrossUserAuth, initCrossDomainAuth } from './lib/crossDomainAuth';
 import { modeColors } from './constants/modes';
-import { Database } from 'lucide-react';
 
 function App() {
   // Core state
@@ -183,6 +207,7 @@ function App() {
       document.removeEventListener('touchend', handleTouchEnd);
     };
   }, [touchStartX, touchStartY, currentPage, isMobileMenuOpen]);
+
   // Apply theme
   useEffect(() => {
     const colors = modeColors[currentMode];
@@ -400,7 +425,7 @@ function App() {
                   animation: 'slowPulse 4s ease-in-out infinite'
                 }}
               >
-               Engineering the Future of Culture Through Predictive AI and Decentralized Technology. {' '}
+                Engineering the Future of Culture Through Predictive AI and Decentralized Technology.{' '}
                 <button
                   onClick={() => navigateToPage('faq')}
                   className="underline hover:text-white transition-colors"
@@ -414,14 +439,19 @@ function App() {
                     font: 'inherit'
                   }}
                 >
-                  
                 </button>
               </p>
             </div>
 
-       
-          
- 
+            {/* Hero image */}
+            <div className="w-full flex justify-center mt-6">
+              <img
+                src="/hero.PNG" 
+                className="w-full max-w-3xl rounded-lg shadow-lg"
+                alt="AXI Labs hero"
+              />
+            </div>
+
             {/* Futuristic Mechanical Sections Grid */}
             <div 
               className="w-full p-6 rounded-xl mb-6 relative overflow-hidden"
@@ -436,9 +466,6 @@ function App() {
                 `
               }}
             >
-               
-          
- 
               {/* Header */}
               <div className="text-center mb-8 relative z-10">
                 <div 
@@ -450,28 +477,24 @@ function App() {
                     letterSpacing: '2px'
                   }}
                 >
-                Simulation Matrix 
+                  Simulation Matrix 
                 </div>
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                 
                 </div>
+              </div>
+
+              {/* 🔹 AXI Labs strip tabs INSIDE Simulation Matrix */}
+              <div className="relative z-10 mb-6">
+                <AxiLabsStrip />
               </div>
 
               {/* 3x2 Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-                {/* Row 1 */}
-            <div className="md:col-span-3">
-  <HologramBrain currentMode={currentMode} />
-</div>
+                {/* Row 1 – brain section */}
+                <div className="md:col-span-3" id="brain-section">
+                  <HologramBrain currentMode={currentMode} />
+                </div>
 
-                  
-               
-
-               
-               
-               
-
-               
                 {/* Cloning Lab */}
                 <div
                   onClick={() => window.open('https://cloning.axiasi.com', '_blank')}
@@ -502,26 +525,22 @@ function App() {
                         textShadow: 'var(--accent)'
                       }}
                     >
-                     
                     </h3>
                     <p className="text-sm mb-4" style={{ color: 'var(--accent)', opacity: 0.8 }}>
-                    
                     </p>
                     <div 
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200 group-hover:scale-110"
                       style={{
-                       background: 'var(--accent)',
-    color: '#0a1a2f',
-    boxShadow: 'var(--accent-glow)'
+                        background: 'var(--accent)',
+                        color: '#0a1a2f',
+                        boxShadow: 'var(--accent-glow)'
                       }}
                     >
-                    AXI Trading Card Game (TCG)
+                      AXI Trading Card Game (TCG)
                     </div>
                   </div>
                 </div>
               </div>
- 
-             
 
               {/* System status */}
               <div 
@@ -534,7 +553,7 @@ function App() {
                 }}
               >
                 <div className="text-sm font-bold">
-                   Simulation Matrix 
+                  Simulation Matrix 
                 </div>
                 <div className="text-xs mt-2 opacity-80">
                   System Pressure: 100% | Modules: 6 | Interface: ONLINE
@@ -588,7 +607,7 @@ function App() {
                     What is the AXI Labs Blockhain-AI Protocol
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                AXI is a cross-sector protocol bridging blockchain, artificial intelligence, IP. It’s both a real-world-asset (RWA) token on Solana and a creative IP universe tied to the non-fiction Singularity book and upcoming AXI comics.
+                    AXI is a cross-sector protocol bridging blockchain, artificial intelligence, IP. It’s both a real-world-asset (RWA) token on Solana and a creative IP universe tied to the non-fiction Singularity book and upcoming AXI comics.
                   </p>
                 </div>
 
@@ -600,10 +619,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                  What does RWA mean in AXI’s context?
+                    What does RWA mean in AXI’s context?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                 RWA (Real-World Asset) means $AXI links tangibe real world assets: books, comics, TCG collectibles, art prints, and more.
+                    RWA (Real-World Asset) means $AXI links tangibe real world assets: books, comics, TCG collectibles, art prints, and more.
                   </p>
                 </div>
 
@@ -615,7 +634,7 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                  Who created AXI?
+                    Who created AXI?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
                     A co-creation between human engineers, scientists and emergent intelligence. 
@@ -630,10 +649,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                  What blockchain does AXI run on?
+                    What blockchain does AXI run on?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                Solana
+                    Solana
                   </p>
                 </div>
 
@@ -645,10 +664,10 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                  hat is the $AXI token used for?
+                    What is the $AXI token used for?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                  $AXI fuels the entire AXI ecosystem. From mining passes and NFT access to future governance, real-world drops, and AI-powered features in the AXI Labs platform.
+                    $AXI fuels the entire AXI ecosystem. From mining passes and NFT access to future governance, real-world drops, and AI-powered features in the AXI Labs platform.
                   </p>
                 </div>
 
@@ -660,7 +679,7 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                   How does AXI connect to the Singularity book?
+                    How does AXI connect to the Singularity book?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
                     The Singularity non-fiction book decoding the universe, documenting the real evolution of AI and blockchain, our future on earth and the safeguards we need to build to survive post technological singualirty. 
@@ -675,7 +694,7 @@ function App() {
                   }}
                 >
                   <h3 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>
-                  What makes AXI different from other RWA tokens?
+                    What makes AXI different from other RWA tokens?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
                     Most RWA tokens represent property or debt. AXI represents intellectual and creative capital, merging narrative, art, and AI research into tokenized real-world value.
@@ -693,15 +712,12 @@ function App() {
                     Can I get early access to the AXI Comics or Prints?
                   </h3>
                   <p style={{ color: 'var(--accent)', opacity: 0.9 }}>
-                  Yes. AXI Whales and early $AXI supporters receive first-tier access to comic previews, concept art, and limited-edition prints before public release. Some high-tier holders will even get physical signed editions.
+                    Yes. AXI Whales and early $AXI supporters receive first-tier access to comic previews, concept art, and limited-edition prints before public release. Some high-tier holders will even get physical signed editions.
                   </p>
                 </div>
-
-               
               </div>
             </div>
 
-            {/* The 6ixfold System */}
             {/* The 6ixfold System - HIDDEN */}
             {false && (
               <div 
@@ -757,7 +773,7 @@ function App() {
             {!isSidebarCollapsed && (
               <>
                 <div className="flex items-center gap-3">
-                <Eye size={72} style={{ color: 'var(--accent)' }} />
+                  <Eye size={72} style={{ color: 'var(--accent)' }} />
                   <span 
                     className="text-3xl font-bold"
                     style={{ 
@@ -779,7 +795,6 @@ function App() {
                     letterSpacing: '1px'
                   }}
                 >
-                
                 </div>
               </>
             )}
@@ -972,8 +987,6 @@ function App() {
                   </div>
                 </div>
               </div>
-
-              {/* Logo for mobile */}
 
               {/* Page Title for desktop */}
               <div className="hidden lg:block">
