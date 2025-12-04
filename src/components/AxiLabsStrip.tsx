@@ -3,13 +3,13 @@ import React from 'react';
 const STRIP_ITEMS = [
   {
     id: 'singularity',
-    title: 'AI Singularity Research',
-    subtitle: 'Singularity AXI: The Book of Human–AI Futures by Maya Nicks',
+    title: 'AI Research',
+    subtitle: 'Singularity AXI Book: The Book of Human–AI Futures by Maya Nicks',
   },
   {
     id: 'axiology ',
     title: 'Astrology AI Engine ',
-    subtitle: 'The Intersection of AI Prediction Tech and Astrology Culture',
+    subtitle: 'Axiology: The Intersection of AI Prediction Tech and Astrology Culture',
   },
   {
     id: 'tcg',

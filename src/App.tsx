@@ -485,7 +485,7 @@ function App() {
                     letterSpacing: '2px'
                   }}
                 >
-                  Simulation Matrix 
+                  AXI Labs Projects 
                 </div>
                 <div className="text-sm lg:text-base" style={{ color: 'var(--accent)', opacity: 0.8 }}>
                 </div>
@@ -495,6 +495,71 @@ function App() {
               <div className="relative z-10 mb-6">
                 <AxiLabsStrip />
               </div>
+              {/* --- Meet the Founder Section --- */}
+<div 
+  className="w-full mt-10 p-6 rounded-xl relative z-10"
+  style={{ 
+    backgroundColor: 'rgba(10, 26, 47, 0.85)',
+    border: '1px solid var(--accent)',
+    boxShadow: '0 0 24px var(--accent-glow)'
+  }}
+>
+  <h2 
+    className="text-2xl font-bold mb-6 text-center"
+    style={{ 
+      color: 'var(--accent)',
+      textShadow: '0 0 12px var(--accent)',
+      fontFamily: 'Orbitron, monospace'
+    }}
+  >
+    Meet the Founder
+  </h2>
+
+  {/* Layout: stacked on mobile, side-by-side on desktop */}
+  <div className="flex flex-col lg:flex-row items-center lg:items-center gap-6 lg:gap-10">
+    {/* Image */}
+    <div className="flex justify-center lg:justify-start w-full lg:w-1/3">
+      <img 
+        src="/founder.PNG"   // keep your file name/path here
+        alt="Maya Nicks"
+        className="rounded-xl border"
+        style={{
+          borderColor: 'var(--accent)',
+          boxShadow: '0 0 20px var(--accent-glow)',
+          width: '220px',
+          height: 'auto'
+        }}
+      />
+    </div>
+
+    {/* Text */}
+    <div className="w-full lg:w-2/3 text-center lg:text-left">
+      <p 
+        className="text-sm lg:text-base font-semibold mb-3"
+        style={{ 
+          color: 'var(--accent)',
+          fontFamily: 'monospace'
+        }}
+      >
+        Maya Nicks — Blockchain-AI Engineer, Singularity Researcher, Product Designer, and Creator of AXI.
+      </p>
+
+      <p
+        className="text-sm lg:text-base leading-relaxed"
+        style={{ 
+          color: 'var(--accent)', 
+          opacity: 0.9,
+          fontFamily: 'monospace'
+        }}
+      >
+        She leads AXI Labs, designing the AXI protocol and narrative universe that fuses predictive AI, 
+        decentralized technology, and culture. Her work turns human–AI research into living IP — from 
+        Singularity AXI and AXI comics to trading cards and real-world assets powered by the $AXI token.
+      </p>
+    </div>
+  </div>
+</div>
+
 
               {/* 3x2 Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
