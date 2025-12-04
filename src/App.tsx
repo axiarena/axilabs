@@ -443,14 +443,22 @@ function App() {
               </p>
             </div>
 
-            {/* Hero image */}
-            <div className="w-full flex justify-center mt-6">
-              <img
-                src="/hero.PNG" 
-                className="w-full max-w-3xl rounded-lg shadow-lg"
-                alt="AXI Labs hero"
-              />
-            </div>
+        {/* Desktop Hero (wide) */}
+<img 
+  src="/hero-desktop.PNG"
+  alt="AXI Hero"
+  className="hidden md:block w-full rounded-xl"
+  style={{ maxHeight: '420px', objectFit: 'cover' }}
+/>
+
+{/* Mobile Hero (vertical) */}
+<img 
+  src="/hero-mobile.jpeg"
+  alt="AXI Hero Mobile"
+  className="block md:hidden w-full rounded-xl"
+  style={{ maxHeight: '600px', objectFit: 'cover' }}
+/>
+
 
             {/* Futuristic Mechanical Sections Grid */}
             <div 
